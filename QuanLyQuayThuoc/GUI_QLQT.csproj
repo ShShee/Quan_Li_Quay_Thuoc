@@ -50,18 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="fBill.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fBill.Designer.cs">
-      <DependentUpon>fBill.cs</DependentUpon>
-    </Compile>
-    <Compile Include="fCheckin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fCheckin.Designer.cs">
-      <DependentUpon>fCheckin.cs</DependentUpon>
-    </Compile>
     <Compile Include="ucThietLap.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -80,11 +68,11 @@
     <Compile Include="ucLuuTru.Designer.cs">
       <DependentUpon>ucLuuTru.cs</DependentUpon>
     </Compile>
-    <Compile Include="fHotelManager.cs">
+    <Compile Include="fQLQT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fHotelManager.Designer.cs">
-      <DependentUpon>fHotelManager.cs</DependentUpon>
+    <Compile Include="fQLQT.Designer.cs">
+      <DependentUpon>fQLQT.cs</DependentUpon>
     </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
@@ -118,12 +106,6 @@
     <Compile Include="ucTonKho.Designer.cs">
       <DependentUpon>ucTonKho.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="fBill.resx">
-      <DependentUpon>fBill.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fCheckin.resx">
-      <DependentUpon>fCheckin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ucThietLap.resx">
       <DependentUpon>ucThietLap.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,8 +115,8 @@
     <EmbeddedResource Include="ucLuuTru.resx">
       <DependentUpon>ucLuuTru.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fHotelManager.resx">
-      <DependentUpon>fHotelManager.cs</DependentUpon>
+    <EmbeddedResource Include="fQLQT.resx">
+      <DependentUpon>fQLQT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>

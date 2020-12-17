@@ -25,7 +25,7 @@ namespace QuanLyQuayThuoc
             string passWord = txbPass.Text;
             if (Login(userName, passWord))
             {
-                fHotelManager f = new fHotelManager();
+                fQLQT f = new fQLQT();
                 this.Hide();
                 f.Permission_to_access = IsManager(userName);
                 f.ShowDialog();

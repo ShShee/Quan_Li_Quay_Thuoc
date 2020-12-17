@@ -443,7 +443,7 @@
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
-            this.tabPage1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.tabPage1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.label4);
@@ -492,7 +492,7 @@
             // 
             // tabPage5
             // 
-            this.tabPage5.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.tabPage5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tabPage5.Controls.Add(this.dataGridView5);
             this.tabPage5.Controls.Add(this.label15);
             this.tabPage5.Controls.Add(this.button7);
@@ -586,7 +586,7 @@
             // 
             // tabPage7
             // 
-            this.tabPage7.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.tabPage7.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tabPage7.Controls.Add(this.dataGridView6);
             this.tabPage7.Controls.Add(this.label21);
             this.tabPage7.Controls.Add(this.button8);
@@ -708,7 +708,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.tabPage3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tabPage3.Controls.Add(this.panel5);
             this.tabPage3.Controls.Add(this.dataGridView4);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
@@ -720,7 +720,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.button9);
             this.panel5.Controls.Add(this.panel1);
@@ -748,7 +748,7 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.tabPage4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tabPage4.Controls.Add(this.panel6);
             this.tabPage4.Controls.Add(this.dataGridView3);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
@@ -760,7 +760,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel6.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel6.Controls.Add(this.label13);
             this.panel6.Controls.Add(this.button10);
             this.panel6.Controls.Add(this.panel4);

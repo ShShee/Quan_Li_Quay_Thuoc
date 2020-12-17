@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace QuanLyQuayThuoc
 {
-    public partial class fHotelManager : Form
+    public partial class fQLQT : Form
     {
         private bool Accessibility=true;
-        public fHotelManager()
+        public fQLQT()
         {
             InitializeComponent();
             ucHome1.Visible = false;
@@ -30,13 +30,12 @@ namespace QuanLyQuayThuoc
             set { Accessibility = value; }
         }
 
-        private void fHotelManager_Load(object sender, EventArgs e)
+        private void fQLQT_Load(object sender, EventArgs e)
         {
             ucTonKho1.Permission_to_access = Accessibility;
             ucThietLap1.Permission_to_access = Accessibility;
             if (Accessibility == false)
             {
-                panel1.Visible = false;
                 button_BaoQuan.Visible = false;
             }
             ucHome1.Visible = true;
@@ -49,7 +48,7 @@ namespace QuanLyQuayThuoc
 
         
 
-        private void fHotelManager_FormClosed(object sender, FormClosedEventArgs e)
+        private void fQLQT_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
@@ -71,7 +70,7 @@ namespace QuanLyQuayThuoc
         {
             if (panel_left.Width == 350)
             {
-                panel_left.Width = 70;
+                panel_left.Width = 55;
             }
             else
             {
