@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ucHoaDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucHoaDon.Designer.cs">
+      <DependentUpon>ucHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucThietLap.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     <Compile Include="ucTonKho.Designer.cs">
       <DependentUpon>ucTonKho.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ucHoaDon.resx">
+      <DependentUpon>ucHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucThietLap.resx">
       <DependentUpon>ucThietLap.cs</DependentUpon>
     </EmbeddedResource>

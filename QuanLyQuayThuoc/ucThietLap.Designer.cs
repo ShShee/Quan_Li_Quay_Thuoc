@@ -82,21 +82,6 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button15 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.button17 = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.button14 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.label16 = new System.Windows.Forms.Label();
-            this.button16 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
@@ -116,9 +101,6 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -752,10 +734,6 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.tabPage3.Controls.Add(this.button15);
-            this.tabPage3.Controls.Add(this.panel5);
-            this.tabPage3.Controls.Add(this.button14);
-            this.tabPage3.Controls.Add(this.panel4);
             this.tabPage3.Controls.Add(this.button3);
             this.tabPage3.Controls.Add(this.panel2);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
@@ -763,195 +741,6 @@
             this.tabPage3.Size = new System.Drawing.Size(1057, 556);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Khác";
-            // 
-            // button15
-            // 
-            this.button15.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.button15.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button15.Enabled = false;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(31, 277);
-            this.button15.Margin = new System.Windows.Forms.Padding(2);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(213, 45);
-            this.button15.TabIndex = 51;
-            this.button15.Text = "Báo cáo Phiếu";
-            this.button15.UseVisualStyleBackColor = false;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.Menu;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel5.Controls.Add(this.comboBox4);
-            this.panel5.Controls.Add(this.label15);
-            this.panel5.Controls.Add(this.comboBox3);
-            this.panel5.Controls.Add(this.comboBox2);
-            this.panel5.Controls.Add(this.label14);
-            this.panel5.Controls.Add(this.button17);
-            this.panel5.Controls.Add(this.label17);
-            this.panel5.Location = new System.Drawing.Point(31, 321);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(331, 178);
-            this.panel5.TabIndex = 50;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(97, 52);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(184, 28);
-            this.comboBox4.TabIndex = 28;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(12, 56);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(76, 18);
-            this.label15.TabIndex = 27;
-            this.label15.Text = "Mã phiếu:";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Phiếu tồn kho",
-            "Phiếu đặt hàng",
-            "Phiếu nhận hàng"});
-            this.comboBox3.Location = new System.Drawing.Point(97, 11);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(184, 28);
-            this.comboBox3.TabIndex = 26;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "PDF",
-            "WORD"});
-            this.comboBox2.Location = new System.Drawing.Point(97, 94);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(184, 28);
-            this.comboBox2.TabIndex = 25;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(12, 98);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(83, 18);
-            this.label14.TabIndex = 24;
-            this.label14.Text = "Định dạng:";
-            // 
-            // button17
-            // 
-            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(101)))), ((int)(((byte)(132)))));
-            this.button17.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.ForeColor = System.Drawing.Color.White;
-            this.button17.Location = new System.Drawing.Point(0, 142);
-            this.button17.Margin = new System.Windows.Forms.Padding(2);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(327, 32);
-            this.button17.TabIndex = 23;
-            this.button17.Text = "Xuất báo cáo";
-            this.button17.UseVisualStyleBackColor = false;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(12, 15);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(85, 18);
-            this.label17.TabIndex = 14;
-            this.label17.Text = "Loại phiếu:";
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.button14.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button14.Enabled = false;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(619, 17);
-            this.button14.Margin = new System.Windows.Forms.Padding(2);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(213, 45);
-            this.button14.TabIndex = 49;
-            this.button14.Text = "Báo cáo doanh thu";
-            this.button14.UseVisualStyleBackColor = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.Menu;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.dateTimePicker1);
-            this.panel4.Controls.Add(this.dataGridView3);
-            this.panel4.Controls.Add(this.label16);
-            this.panel4.Controls.Add(this.button16);
-            this.panel4.Location = new System.Drawing.Point(619, 61);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(420, 465);
-            this.panel4.TabIndex = 48;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "MM/yyyy";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(72, 15);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(89, 26);
-            this.dateTimePicker1.TabIndex = 22;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.Menu;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(15, 47);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(385, 389);
-            this.dataGridView3.TabIndex = 19;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(12, 21);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(55, 18);
-            this.label16.TabIndex = 14;
-            this.label16.Text = "Tháng:";
-            // 
-            // button16
-            // 
-            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(101)))), ((int)(((byte)(132)))));
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.ForeColor = System.Drawing.Color.White;
-            this.button16.Location = new System.Drawing.Point(299, 10);
-            this.button16.Margin = new System.Windows.Forms.Padding(2);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(101, 32);
-            this.button16.TabIndex = 12;
-            this.button16.Text = "Xuất báo cáo";
-            this.button16.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -1109,11 +898,6 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -1188,20 +972,5 @@
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button button16;
     }
 }

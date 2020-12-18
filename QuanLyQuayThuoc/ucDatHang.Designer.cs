@@ -108,6 +108,9 @@
             this.label17 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel3.SuspendLayout();
@@ -445,6 +448,7 @@
             this.tabPage1.AutoScroll = true;
             this.tabPage1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage1.Controls.Add(this.button16);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.button1);
@@ -484,7 +488,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(324, 17);
+            this.textBox1.Location = new System.Drawing.Point(324, 16);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(114, 26);
@@ -493,6 +497,7 @@
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tabPage5.Controls.Add(this.button12);
             this.tabPage5.Controls.Add(this.dataGridView5);
             this.tabPage5.Controls.Add(this.label15);
             this.tabPage5.Controls.Add(this.button7);
@@ -587,6 +592,7 @@
             // tabPage7
             // 
             this.tabPage7.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tabPage7.Controls.Add(this.button11);
             this.tabPage7.Controls.Add(this.dataGridView6);
             this.tabPage7.Controls.Add(this.label21);
             this.tabPage7.Controls.Add(this.button8);
@@ -1022,6 +1028,48 @@
             this.dataGridView3.Size = new System.Drawing.Size(484, 479);
             this.dataGridView3.TabIndex = 51;
             // 
+            // button16
+            // 
+            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(101)))), ((int)(((byte)(132)))));
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.ForeColor = System.Drawing.Color.White;
+            this.button16.Location = new System.Drawing.Point(484, 3);
+            this.button16.Margin = new System.Windows.Forms.Padding(2);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(101, 32);
+            this.button16.TabIndex = 37;
+            this.button16.Text = "Xuất báo cáo";
+            this.button16.UseVisualStyleBackColor = false;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(101)))), ((int)(((byte)(132)))));
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.ForeColor = System.Drawing.Color.White;
+            this.button12.Location = new System.Drawing.Point(484, 4);
+            this.button12.Margin = new System.Windows.Forms.Padding(2);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(101, 32);
+            this.button12.TabIndex = 41;
+            this.button12.Text = "Xuất báo cáo";
+            this.button12.UseVisualStyleBackColor = false;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(101)))), ((int)(((byte)(132)))));
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ForeColor = System.Drawing.Color.White;
+            this.button11.Location = new System.Drawing.Point(484, 4);
+            this.button11.Margin = new System.Windows.Forms.Padding(2);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(101, 32);
+            this.button11.TabIndex = 41;
+            this.button11.Text = "Xuất báo cáo";
+            this.button11.UseVisualStyleBackColor = false;
+            // 
             // ucDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1155,5 +1203,8 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button11;
     }
 }

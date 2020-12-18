@@ -31,11 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fQLQT));
             this.button_exit = new System.Windows.Forms.Button();
             this.panel_congcu = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel_left = new System.Windows.Forms.Panel();
             this.button_thugon = new System.Windows.Forms.Button();
             this.panel_Menu = new System.Windows.Forms.Panel();
+            this.button_hoadon = new System.Windows.Forms.Button();
             this.btn_PhieuDatHang = new System.Windows.Forms.Button();
             this.button_phieutonkho = new System.Windows.Forms.Button();
             this.button_trangchu = new System.Windows.Forms.Button();
@@ -51,6 +53,7 @@
             this.ucTonKho1 = new QuanLyQuayThuoc.ucTonKho();
             this.ucHome1 = new QuanLyQuayThuoc.ucHome();
             this.ucDatHang1 = new QuanLyQuayThuoc.ucDatHang();
+            this.ucHoaDon1 = new QuanLyQuayThuoc.ucHoaDon();
             this.panel_congcu.SuspendLayout();
             this.panel_left.SuspendLayout();
             this.panel_Menu.SuspendLayout();
@@ -76,6 +79,7 @@
             // panel_congcu
             // 
             this.panel_congcu.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel_congcu.Controls.Add(this.textBox1);
             this.panel_congcu.Controls.Add(this.label1);
             this.panel_congcu.Controls.Add(this.button1);
             this.panel_congcu.Controls.Add(this.button_exit);
@@ -85,6 +89,14 @@
             this.panel_congcu.Name = "panel_congcu";
             this.panel_congcu.Size = new System.Drawing.Size(1430, 42);
             this.panel_congcu.TabIndex = 15;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(1122, 10);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(180, 20);
+            this.textBox1.TabIndex = 18;
+            this.textBox1.Visible = false;
             // 
             // label1
             // 
@@ -125,7 +137,7 @@
             this.panel_left.Location = new System.Drawing.Point(0, 42);
             this.panel_left.Margin = new System.Windows.Forms.Padding(2);
             this.panel_left.Name = "panel_left";
-            this.panel_left.Size = new System.Drawing.Size(350, 681);
+            this.panel_left.Size = new System.Drawing.Size(350, 766);
             this.panel_left.TabIndex = 16;
             // 
             // button_thugon
@@ -147,6 +159,7 @@
             // 
             // panel_Menu
             // 
+            this.panel_Menu.Controls.Add(this.button_hoadon);
             this.panel_Menu.Controls.Add(this.btn_PhieuDatHang);
             this.panel_Menu.Controls.Add(this.button_phieutonkho);
             this.panel_Menu.Controls.Add(this.button_trangchu);
@@ -158,8 +171,29 @@
             this.panel_Menu.Location = new System.Drawing.Point(0, 50);
             this.panel_Menu.Margin = new System.Windows.Forms.Padding(2);
             this.panel_Menu.Name = "panel_Menu";
-            this.panel_Menu.Size = new System.Drawing.Size(350, 631);
+            this.panel_Menu.Size = new System.Drawing.Size(350, 716);
             this.panel_Menu.TabIndex = 29;
+            // 
+            // button_hoadon
+            // 
+            this.button_hoadon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_hoadon.FlatAppearance.BorderSize = 0;
+            this.button_hoadon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
+            this.button_hoadon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
+            this.button_hoadon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_hoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_hoadon.ForeColor = System.Drawing.Color.Black;
+            this.button_hoadon.Image = ((System.Drawing.Image)(resources.GetObject("button_hoadon.Image")));
+            this.button_hoadon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_hoadon.Location = new System.Drawing.Point(0, 272);
+            this.button_hoadon.Margin = new System.Windows.Forms.Padding(2);
+            this.button_hoadon.Name = "button_hoadon";
+            this.button_hoadon.Size = new System.Drawing.Size(350, 63);
+            this.button_hoadon.TabIndex = 29;
+            this.button_hoadon.Text = "     Thông tin hóa đơn";
+            this.button_hoadon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_hoadon.UseVisualStyleBackColor = true;
+            this.button_hoadon.Click += new System.EventHandler(this.button_hoadon_Click);
             // 
             // btn_PhieuDatHang
             // 
@@ -172,7 +206,7 @@
             this.btn_PhieuDatHang.ForeColor = System.Drawing.Color.Black;
             this.btn_PhieuDatHang.Image = ((System.Drawing.Image)(resources.GetObject("btn_PhieuDatHang.Image")));
             this.btn_PhieuDatHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_PhieuDatHang.Location = new System.Drawing.Point(0, 341);
+            this.btn_PhieuDatHang.Location = new System.Drawing.Point(0, 408);
             this.btn_PhieuDatHang.Margin = new System.Windows.Forms.Padding(2);
             this.btn_PhieuDatHang.Name = "btn_PhieuDatHang";
             this.btn_PhieuDatHang.Size = new System.Drawing.Size(350, 63);
@@ -193,7 +227,7 @@
             this.button_phieutonkho.ForeColor = System.Drawing.Color.Black;
             this.button_phieutonkho.Image = ((System.Drawing.Image)(resources.GetObject("button_phieutonkho.Image")));
             this.button_phieutonkho.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_phieutonkho.Location = new System.Drawing.Point(0, 274);
+            this.button_phieutonkho.Location = new System.Drawing.Point(0, 341);
             this.button_phieutonkho.Margin = new System.Windows.Forms.Padding(2);
             this.button_phieutonkho.Name = "button_phieutonkho";
             this.button_phieutonkho.Size = new System.Drawing.Size(350, 63);
@@ -299,7 +333,7 @@
             this.button_thietlap.ForeColor = System.Drawing.Color.Black;
             this.button_thietlap.Image = ((System.Drawing.Image)(resources.GetObject("button_thietlap.Image")));
             this.button_thietlap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_thietlap.Location = new System.Drawing.Point(0, 408);
+            this.button_thietlap.Location = new System.Drawing.Point(1, 475);
             this.button_thietlap.Margin = new System.Windows.Forms.Padding(2);
             this.button_thietlap.Name = "button_thietlap";
             this.button_thietlap.Size = new System.Drawing.Size(350, 63);
@@ -319,10 +353,10 @@
             this.button_thoat.ForeColor = System.Drawing.Color.Black;
             this.button_thoat.Image = ((System.Drawing.Image)(resources.GetObject("button_thoat.Image")));
             this.button_thoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_thoat.Location = new System.Drawing.Point(1, 567);
+            this.button_thoat.Location = new System.Drawing.Point(0, 640);
             this.button_thoat.Margin = new System.Windows.Forms.Padding(2);
             this.button_thoat.Name = "button_thoat";
-            this.button_thoat.Size = new System.Drawing.Size(344, 55);
+            this.button_thoat.Size = new System.Drawing.Size(351, 55);
             this.button_thoat.TabIndex = 28;
             this.button_thoat.Text = "     Thoát";
             this.button_thoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -338,7 +372,7 @@
             this.ucThietLap1.Margin = new System.Windows.Forms.Padding(2);
             this.ucThietLap1.Name = "ucThietLap1";
             this.ucThietLap1.Permission_to_access = true;
-            this.ucThietLap1.Size = new System.Drawing.Size(1080, 681);
+            this.ucThietLap1.Size = new System.Drawing.Size(1080, 766);
             this.ucThietLap1.TabIndex = 23;
             // 
             // ucBaoQuan1
@@ -348,7 +382,7 @@
             this.ucBaoQuan1.Location = new System.Drawing.Point(350, 42);
             this.ucBaoQuan1.Margin = new System.Windows.Forms.Padding(2);
             this.ucBaoQuan1.Name = "ucBaoQuan1";
-            this.ucBaoQuan1.Size = new System.Drawing.Size(1080, 681);
+            this.ucBaoQuan1.Size = new System.Drawing.Size(1080, 766);
             this.ucBaoQuan1.TabIndex = 22;
             // 
             // ucThuoc1
@@ -358,7 +392,7 @@
             this.ucThuoc1.Location = new System.Drawing.Point(350, 42);
             this.ucThuoc1.Margin = new System.Windows.Forms.Padding(2);
             this.ucThuoc1.Name = "ucThuoc1";
-            this.ucThuoc1.Size = new System.Drawing.Size(1080, 681);
+            this.ucThuoc1.Size = new System.Drawing.Size(1080, 766);
             this.ucThuoc1.TabIndex = 21;
             // 
             // ucLuuTru1
@@ -368,7 +402,7 @@
             this.ucLuuTru1.Location = new System.Drawing.Point(350, 42);
             this.ucLuuTru1.Margin = new System.Windows.Forms.Padding(2);
             this.ucLuuTru1.Name = "ucLuuTru1";
-            this.ucLuuTru1.Size = new System.Drawing.Size(1080, 681);
+            this.ucLuuTru1.Size = new System.Drawing.Size(1080, 766);
             this.ucLuuTru1.TabIndex = 20;
             // 
             // ucTonKho1
@@ -379,7 +413,7 @@
             this.ucTonKho1.Margin = new System.Windows.Forms.Padding(2);
             this.ucTonKho1.Name = "ucTonKho1";
             this.ucTonKho1.Permission_to_access = true;
-            this.ucTonKho1.Size = new System.Drawing.Size(1080, 681);
+            this.ucTonKho1.Size = new System.Drawing.Size(1080, 766);
             this.ucTonKho1.TabIndex = 19;
             // 
             // ucHome1
@@ -389,7 +423,7 @@
             this.ucHome1.Location = new System.Drawing.Point(350, 42);
             this.ucHome1.Margin = new System.Windows.Forms.Padding(2);
             this.ucHome1.Name = "ucHome1";
-            this.ucHome1.Size = new System.Drawing.Size(1080, 681);
+            this.ucHome1.Size = new System.Drawing.Size(1080, 766);
             this.ucHome1.TabIndex = 18;
             // 
             // ucDatHang1
@@ -399,15 +433,25 @@
             this.ucDatHang1.Location = new System.Drawing.Point(350, 42);
             this.ucDatHang1.Margin = new System.Windows.Forms.Padding(2);
             this.ucDatHang1.Name = "ucDatHang1";
-            this.ucDatHang1.Size = new System.Drawing.Size(1080, 681);
+            this.ucDatHang1.Size = new System.Drawing.Size(1080, 766);
             this.ucDatHang1.TabIndex = 24;
+            // 
+            // ucHoaDon1
+            // 
+            this.ucHoaDon1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ucHoaDon1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucHoaDon1.Location = new System.Drawing.Point(350, 42);
+            this.ucHoaDon1.Margin = new System.Windows.Forms.Padding(2);
+            this.ucHoaDon1.Name = "ucHoaDon1";
+            this.ucHoaDon1.Size = new System.Drawing.Size(1080, 766);
+            this.ucHoaDon1.TabIndex = 25;
             // 
             // fQLQT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(228)))), ((int)(((byte)(234)))));
-            this.ClientSize = new System.Drawing.Size(1430, 723);
+            this.ClientSize = new System.Drawing.Size(1430, 808);
             this.ControlBox = false;
             this.Controls.Add(this.ucThietLap1);
             this.Controls.Add(this.ucBaoQuan1);
@@ -416,6 +460,7 @@
             this.Controls.Add(this.ucTonKho1);
             this.Controls.Add(this.ucHome1);
             this.Controls.Add(this.ucDatHang1);
+            this.Controls.Add(this.ucHoaDon1);
             this.Controls.Add(this.panel_left);
             this.Controls.Add(this.panel_congcu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -457,6 +502,9 @@
         private ucBaoQuan ucBaoQuan1;
         private ucThietLap ucThietLap1;
         private ucDatHang ucDatHang1;
+        private ucHoaDon ucHoaDon1;
         private System.Windows.Forms.Button btn_PhieuDatHang;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button_hoadon;
     }
 }
