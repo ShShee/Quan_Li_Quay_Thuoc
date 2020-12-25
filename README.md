@@ -1,9 +1,8 @@
 # Phần mềm Quản lý Khách sạn
 ## Thông tin thành viên nhóm
-- Đinh Quang Hoàng - 18520282  
-- Trần Phương Duy  - 18520038 
-- Tô Hoài Quỳnh Vy - 18520405 
-- Thi Thanh Chương - 18520539 
+- Đoàn Minh Tiến - 15520876  
+- Trần Minh Nhựt - 16520904 
+- Nguyễn Thị Nhật Hằng - 17520437
 - Nguyễn Trùng Dương - 18520030 
 ## Giới thiệu
 - Trong đời sống hiện nay, ứng dụng tin học hóa vào các ngành kinh tế góp phần quan trọng trong sự thành công và tăng trưởng của từng ngành. Đặc biệt hơn hết đó là ứng dụng tin học vào các lĩnh vực quản lý có hệ thống như bến xe, siêu thị, nhà sách, công ty, ngân hàng, kí túc xá, nhà hàng….Với việc góp sức từ các phần mềm quản lý đã giảm thiểu được số lượng chi phí đầu tư cho nguồn nhân công, đồng thời còn giúp tăng hiệu quả tính chính xác trong việc quản lý, giúp tiết kiệm thời gian và nâng cao chất lượng cuộc sống con người
