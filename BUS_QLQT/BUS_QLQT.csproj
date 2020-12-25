@@ -45,18 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BillManagementBUS.cs" />
-    <Compile Include="CheckinManagementBUS.cs" />
-    <Compile Include="CustomerTypeBUS.cs" />
+    <Compile Include="QLLuutruBUS.cs" />
+    <Compile Include="QLBaoquanBUS.cs" />
+    <Compile Include="QLThuocBUS.cs" />
     <Compile Include="HomeBUS.cs" />
     <Compile Include="infoBillBUS.cs" />
-    <Compile Include="infoCheckinBUS.cs" />
+    <Compile Include="QLNhacungcapBUS.cs" />
     <Compile Include="LoginBUS.cs" />
     <Compile Include="PermissionBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RevenueBUS.cs" />
+    <Compile Include="QLHoadonBUS.cs" />
     <Compile Include="RoomManagementBUS.cs" />
-    <Compile Include="SettingBUS.cs" />
+    <Compile Include="QLBaohiemBUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -24,7 +24,7 @@ namespace QuanLyQuayThuoc.BUS
 
         public bool Login(string userName, string passWord)
         {
-            return LoginDAL.Instance.Login(userName, GetMD5(passWord));
+            return LoginDAL.Instance.Login(userName, /*GetMD5(*/passWord/*)*/);
         }
         public String GetMD5(string txt)
         {

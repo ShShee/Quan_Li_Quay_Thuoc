@@ -31,13 +31,18 @@ namespace QuanLyQuayThuoc
             set { Accessibility = value; }
         }
 
+        public void SetID(int id_nhanvien)
+        {
+            txbID.Text = id_nhanvien.ToString();
+        }
+
         private void fQLQT_Load(object sender, EventArgs e)
         {
-            ucTonKho1.Permission_to_access = Accessibility;
-            ucThietLap1.Permission_to_access = Accessibility;
+        //    ucHome1.GetId_nhanvien(txbID.Text);
             if (Accessibility == false)
             {
-                button_BaoQuan.Visible = false;
+                button_thietlap.Visible = false;
+                btn_PhieuDatHang.Visible = false;
             }
             ucHome1.Visible = true;
         }

@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace QuanLyQuayThuoc.DAL
 {
-    public class CheckinManagementDAL
+    public class QLBaoquanDAL
     {
-        private static CheckinManagementDAL instance;
-        public static CheckinManagementDAL Instance
+        private static QLBaoquanDAL instance;
+        public static QLBaoquanDAL Instance
         {
-            get { if (instance == null) instance = new CheckinManagementDAL(); return instance; }
+            get { if (instance == null) instance = new QLBaoquanDAL(); return instance; }
             private set { instance = value; }
         }
-        private CheckinManagementDAL() { }
-        public DataTable LoadCheckinList()
+        private QLBaoquanDAL() { }
+        public DataTable LoadThongtinbaoquanList()
         {
-           return DataProvider.Instance.ExecuteQuery("USP_GetCheckinlist");
+           return DataProvider.Instance.ExecuteQuery("SELECT * FROM DBO.THONGTINBAOQUAN");
         }
         public DataTable SearchCheckin(string condition)
         {

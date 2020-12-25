@@ -14,26 +14,57 @@ namespace QuanLyQuayThuoc
 {
     public partial class ucHome : UserControl
     {
+        private string id_nhanvien;
         public ucHome()
         {
             InitializeComponent();
-            LoadHome(); 
         }
-
-        void LoadHome()
+         private void LoadData()
         {
+            dtgvChitiethoadon.DataSource = QLHoadonBUS.Instance.LoadChitiethoadonList(txbId_hoadon.Text);
+        }
+        private void TinhTong()
+        {
+            int tien = dtgvChitiethoadon.Rows.Count;
+            int thanhtien = 0;
+            for(int i=0;i<tien;i++)
+            {
+                thanhtien += Convert.ToInt32(dtgvChitiethoadon.Rows[i].Cells["giathanh"].Value) * Convert.ToInt32(dtgvChitiethoadon.Rows[i].Cells["lieuluong"].Value);
+            }
+            if(rbtnBanTheoDon.Checked==true) thanhtien = thanhtien - (QLBaohiemBUS.Instance.GetTileBaoHiem(cbbLoaihinh.Text) * thanhtien) / 100;
+            txbTongtien.Text = thanhtien.ToString();
+        }
+        public void GetId_nhanvien(string id)
+        {
+            txbId_nhanvien.Text = id;
+            txbTen_nhanvien.Text = PermissionBUS.Instance.GetTen_nhanvien(txbId_nhanvien.Text);
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            panel2.Enabled = false;
-            panel1.Visible = true;
-            btnLayThuoc.Visible = true;
+            if (panel3.Visible == true && cbbLoaihinh.Text != "none" && txbSobaohiem.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập vào số bảo hiểm y tế !!!");
+            }
+            else
+            {
+                panel2.Enabled = false;
+                panel1.Visible = true;
+                btnLayThuoc.Visible = true;
+                cbbTenthuoc.Items.Clear();
+                List<string> result = QLLuutruBUS.Instance.LoadTenthuocList(panel3.Visible == true ? true : false);
+                foreach (string part in result)
+                    cbbTenthuoc.Items.Add(part);
+            }
         }
 
         private void rbtnBanTheoDon_CheckedChanged(object sender, EventArgs e)
         {
-            if (panel3.Visible == false) panel3.Visible = true;
+
+            if (panel3.Visible == false)
+            {
+                panel3.Visible = true;
+            }
             else
             {
                 panel3.Visible = false;
@@ -46,6 +77,92 @@ namespace QuanLyQuayThuoc
             panel1.Visible = false;
             panel2.Enabled = true;
             btnLayThuoc.Visible = false;
+            cbbTenthuoc.Text = "";
+            cbbId_thuoc.Text = "";
+            txbLieuluong.Text = "";
+            txbSoluong.Text = "";
+            QLHoadonBUS.Instance.Taolaihoadon(txbId_hoadon.Text);
+            LoadData();
+            TinhTong();
+        }
+
+        private void ucHome_Load(object sender, EventArgs e)
+        {
+            txbId_hoadon.Text = "HD-" + PermissionBUS.Instance.GetId_hoadon().ToString();
+            LoadData();
+            TinhTong();
+        }
+
+        private void txbSodienthoai_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cbbTenthuoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbbId_thuoc.Text = "";
+            txbSoluong.Text = "";
+            cbbId_thuoc.Items.Clear();
+            List<string> result = QLThuocBUS.Instance.LoadIdthuocList(cbbTenthuoc.Text);
+            foreach (string part in result)
+                cbbId_thuoc.Items.Add(part);
+        }
+
+        private void cbbId_thuoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txbSoluong.Text = "";
+            txbSoluong.Text = QLThuocBUS.Instance.GetSoluong(cbbId_thuoc.Text).ToString();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(txbSoluong.Text) < Convert.ToInt32(txbLieuluong.Text)) MessageBox.Show("Số lượng lấy không được nhiều hơn tồn kho !!!");
+            else
+            {
+                QLHoadonBUS.Instance.Themchitiethoadon(Convert.ToInt32(txbLieuluong.Text), cbbId_thuoc.Text, txbId_hoadon.Text);
+                LoadData();
+                TinhTong();
+            }
+        }
+
+        private void dtgvChitiethoadon_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dtgvChitiethoadon.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dtgvChitiethoadon.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dtgvChitiethoadon.Rows[selectedrowindex];
+                cbbTenthuoc.Text = Convert.ToString(selectedRow.Cells["tenthuoc"].Value);
+                cbbId_thuoc.Text = Convert.ToString(selectedRow.Cells["id_thuoc"].Value);
+                txbLieuluong.Text = Convert.ToString(selectedRow.Cells["lieuluong"].Value);
+                txbId_chitiet.Text = Convert.ToString(selectedRow.Cells["id_chitietkethuoc"].Value);
+                txbSoluong.Text = QLThuocBUS.Instance.GetSoluong(cbbId_thuoc.Text).ToString();
+            }
+        }
+
+        private void btnAlter_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(txbSoluong.Text) < Convert.ToInt32(txbLieuluong.Text)) MessageBox.Show("Số lượng lấy không được nhiều hơn tồn kho !!!");
+            else
+            {
+                QLHoadonBUS.Instance.Suahoadon(Convert.ToInt32(txbId_chitiet.Text),cbbId_thuoc.Text,Convert.ToInt32(txbLieuluong.Text));
+                LoadData();
+                TinhTong();
+            }
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            QLHoadonBUS.Instance.Xoahoadon(Convert.ToInt32(txbId_chitiet.Text),cbbId_thuoc.Text,Convert.ToInt32(txbLieuluong.Text));
+            LoadData();
+            TinhTong();
+        }
+
+        private void btnThanhtoan_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

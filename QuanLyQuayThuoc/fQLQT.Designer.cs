@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fQLQT));
             this.button_exit = new System.Windows.Forms.Button();
             this.panel_congcu = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel_left = new System.Windows.Forms.Panel();
@@ -54,6 +53,7 @@
             this.ucHome1 = new QuanLyQuayThuoc.ucHome();
             this.ucDatHang1 = new QuanLyQuayThuoc.ucDatHang();
             this.ucHoaDon1 = new QuanLyQuayThuoc.ucHoaDon();
+            this.txbID = new System.Windows.Forms.TextBox();
             this.panel_congcu.SuspendLayout();
             this.panel_left.SuspendLayout();
             this.panel_Menu.SuspendLayout();
@@ -79,7 +79,7 @@
             // panel_congcu
             // 
             this.panel_congcu.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.panel_congcu.Controls.Add(this.textBox1);
+            this.panel_congcu.Controls.Add(this.txbID);
             this.panel_congcu.Controls.Add(this.label1);
             this.panel_congcu.Controls.Add(this.button1);
             this.panel_congcu.Controls.Add(this.button_exit);
@@ -89,14 +89,6 @@
             this.panel_congcu.Name = "panel_congcu";
             this.panel_congcu.Size = new System.Drawing.Size(1430, 42);
             this.panel_congcu.TabIndex = 15;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(1122, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 20);
-            this.textBox1.TabIndex = 18;
-            this.textBox1.Visible = false;
             // 
             // label1
             // 
@@ -446,6 +438,14 @@
             this.ucHoaDon1.Size = new System.Drawing.Size(1080, 766);
             this.ucHoaDon1.TabIndex = 25;
             // 
+            // txbID
+            // 
+            this.txbID.Location = new System.Drawing.Point(1244, 11);
+            this.txbID.Name = "txbID";
+            this.txbID.Size = new System.Drawing.Size(77, 20);
+            this.txbID.TabIndex = 18;
+            this.txbID.Visible = false;
+            // 
             // fQLQT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -504,7 +504,7 @@
         private ucDatHang ucDatHang1;
         private ucHoaDon ucHoaDon1;
         private System.Windows.Forms.Button btn_PhieuDatHang;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button_hoadon;
+        private System.Windows.Forms.TextBox txbID;
     }
 }

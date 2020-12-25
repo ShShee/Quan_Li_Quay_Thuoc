@@ -34,9 +34,9 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txbPass = new System.Windows.Forms.TextBox();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.txbUserName = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.txbPass = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,7 +75,7 @@
             this.btnExit.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.Black;
             this.btnExit.Location = new System.Drawing.Point(385, 99);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(109, 45);
             this.btnExit.TabIndex = 5;
@@ -105,20 +105,19 @@
             this.panel3.Controls.Add(this.txbPass);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(140, 360);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(513, 155);
             this.panel3.TabIndex = 4;
             // 
-            // txbPass
+            // txbUserName
             // 
-            this.txbPass.Location = new System.Drawing.Point(202, 15);
-            this.txbPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txbPass.Multiline = true;
-            this.txbPass.Name = "txbPass";
-            this.txbPass.PasswordChar = '●';
-            this.txbPass.Size = new System.Drawing.Size(292, 25);
-            this.txbPass.TabIndex = 2;
+            this.txbUserName.Location = new System.Drawing.Point(202, 15);
+            this.txbUserName.Margin = new System.Windows.Forms.Padding(2);
+            this.txbUserName.Multiline = true;
+            this.txbUserName.Name = "txbUserName";
+            this.txbUserName.Size = new System.Drawing.Size(292, 25);
+            this.txbUserName.TabIndex = 1;
             // 
             // btnLogin
             // 
@@ -127,7 +126,7 @@
             this.btnLogin.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.Black;
             this.btnLogin.Location = new System.Drawing.Point(253, 99);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(109, 45);
             this.btnLogin.TabIndex = 4;
@@ -135,14 +134,15 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // txbUserName
+            // txbPass
             // 
-            this.txbUserName.Location = new System.Drawing.Point(202, 56);
-            this.txbUserName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txbUserName.Multiline = true;
-            this.txbUserName.Name = "txbUserName";
-            this.txbUserName.Size = new System.Drawing.Size(292, 25);
-            this.txbUserName.TabIndex = 1;
+            this.txbPass.Location = new System.Drawing.Point(202, 53);
+            this.txbPass.Margin = new System.Windows.Forms.Padding(2);
+            this.txbPass.Multiline = true;
+            this.txbPass.Name = "txbPass";
+            this.txbPass.PasswordChar = '●';
+            this.txbPass.Size = new System.Drawing.Size(292, 25);
+            this.txbPass.TabIndex = 2;
             // 
             // pictureBox1
             // 
@@ -167,7 +167,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";

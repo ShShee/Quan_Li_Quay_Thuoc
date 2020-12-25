@@ -23,5 +23,10 @@ namespace QuanLyQuayThuoc
         {
             if (panel3.Visible == true) panel3.Visible = false; else panel3.Visible = true;
         }
+
+        private void ucThuoc_Load(object sender, EventArgs e)
+        {
+            dtgvQLThuoc.DataSource = QLThuocBUS.Instance.LoadThuocList();
+        }
     }
 }

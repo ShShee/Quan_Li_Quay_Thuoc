@@ -29,5 +29,11 @@ namespace QuanLyQuayThuoc
         {
             if (panel3.Visible == false) panel3.Visible = true; else panel3.Visible = false;
         }
+
+        private void ucThietLap_Load(object sender, EventArgs e)
+        {
+            dtgvNhacungcap.DataSource = QLNhacungcapBUS.Instance.LoadNhacungcapList();
+            dtgvBaohiemyte.DataSource = QLBaohiemBUS.Instance.LoadBaohiemyteList();
+        }
     }
 }

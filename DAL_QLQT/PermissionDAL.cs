@@ -23,5 +23,23 @@ namespace QuanLyQuayThuoc.DAL
             string permission_position = result.Rows[0].Field<string>(0);
             return permission_position;
         }
+        public int GetId_nhanvien(string username)
+        {
+            DataTable result = DataProvider.Instance.ExecuteQuery("USP_GetId_nhanvien @username ", new object[] { username });
+            int id = result.Rows[0].Field<int>(0);
+            return id;
+        }
+        public string GetTen_nhanvien(string id)
+        {
+            DataTable result = DataProvider.Instance.ExecuteQuery("USP_GetTen_nhanvien @id ", new object[] { id });
+            string name = result.Rows[0].Field<string>(0);
+            return name;
+        }
+        public int GetId_hoadon()
+        {
+            DataTable result = DataProvider.Instance.ExecuteQuery("USP_GetId_hoadon ");
+            int id = result.Rows[0].Field<int>(0);
+            return id+1;
+        }
     }
 }

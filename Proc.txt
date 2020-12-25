@@ -1,0 +1,88 @@
+--tạo proc đăng nhập tránh injection
+CREATE PROC USP_LOGIN
+(@username nvarchar(100),
+@pass nvarchar(1000))
+as
+begin
+	SELECT * FROM NHANVIEN WHERE taikhoan = @username and matkhau= @pass
+end 
+go
+
+--permission
+CREATE PROC USP_GetPermission
+(@username nvarchar(100))
+AS select chucvu from NHANVIEN where taikhoan = @username
+GO
+
+--get id nhan vien
+CREATE PROC USP_GetId_nhanvien
+(@username nvarchar(100))
+AS select id_nhanvien from NHANVIEN where taikhoan = @username
+GO
+
+--get ten nhan vien
+CREATE PROC USP_GetTen_nhanvien
+(@id INT)
+AS select ten from NHANVIEN,THONGTINCOBAN where NHANVIEN.id_nhanvien=@id and NHANVIEN.id_thongtincoban=THONGTINCOBAN.id_thongtincoban
+GO
+
+--get id hoa don
+CREATE PROC USP_GetId_hoadon
+AS 
+select id_hoadon from MAHIENTAI where MAHIENTAI.id_mahientai='1'
+GO
+
+--them chi tiet ke thuoc
+CREATE PROC USP_Themhoadon
+(@lieuluong INT,@id_thuoc NVARCHAR(100),@id_hoadon INT)
+AS
+BEGIN
+UPDATE THUOC
+SET soluong=soluong-@lieuluong
+WHERE id_thuoc=@id_thuoc
+INSERT INTO CHITIETKETHUOC VALUES(@lieuluong,@id_thuoc,@id_hoadon)
+end
+go
+
+--tao lai hoa don
+CREATE PROC USP_Taolaihoadon
+(@id_hoadon NVARCHAR(100))
+AS
+BEGIN
+UPDATE THUOC
+SET soluong=soluong+CHITIETKETHUOC.lieuluong
+FROM THUOC,CHITIETKETHUOC,HOADONBANTHUOC
+WHERE CHITIETKETHUOC.id_hoadon=HOADONBANTHUOC.id_hoadon and CHITIETKETHUOC.id_thuoc=THUOC.id_thuoc
+DELETE FROM CHITIETKETHUOC WHERE id_hoadon=@id_hoadon
+end
+go
+
+--sua hoa don
+CREATE PROC USP_Suahoadon
+(@id_chitietkethuoc INT,@id_thuoc NVARCHAR(100),@lieuluong INT)
+AS
+BEGIN
+UPDATE THUOC
+SET soluong=soluong+CHITIETKETHUOC.lieuluong
+FROM THUOC,CHITIETKETHUOC
+WHERE THUOC.id_thuoc=CHITIETKETHUOC.id_thuoc and CHITIETKETHUOC.id_chitietkethuoc=@id_chitietkethuoc
+UPDATE CHITIETKETHUOC
+SET lieuluong=@lieuluong, id_thuoc=@id_thuoc
+WHERE id_chitietkethuoc=@id_chitietkethuoc
+UPDATE THUOC
+SET soluong=soluong-@lieuluong
+WHERE id_thuoc=@id_thuoc
+end
+go
+
+--xoa chi tiet ke thuoc
+CREATE PROC USP_Xoahoadon
+(@id_chitietkethuoc INT,@id_thuoc NVARCHAR(100), @lieuluong INT)
+AS
+BEGIN
+UPDATE THUOC
+SET soluong=soluong+@lieuluong
+WHERE id_thuoc=@id_thuoc
+DELETE FROM CHITIETKETHUOC WHERE id_chitietkethuoc=@id_chitietkethuoc
+end
+go

@@ -42,11 +42,15 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgvQLThuoc = new System.Windows.Forms.DataGridView();
             this.btnAddRoom = new System.Windows.Forms.Button();
+            this.id_thuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chatluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_loaithuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvQLThuoc)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,10 +65,10 @@
             this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dtgvQLThuoc);
             this.panel1.Location = new System.Drawing.Point(16, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1084, 501);
+            this.panel1.Size = new System.Drawing.Size(1000, 501);
             this.panel1.TabIndex = 6;
             // 
             // label3
@@ -88,8 +92,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "id_thuoc",
-            "id_loaithuoc",
-            "id_baoquan"});
+            "id_loaithuoc"});
             this.comboBox1.Location = new System.Drawing.Point(234, 12);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 28);
@@ -104,9 +107,9 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.textBox4);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(824, 47);
+            this.panel3.Location = new System.Drawing.Point(732, 48);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(234, 78);
+            this.panel3.Size = new System.Drawing.Size(233, 79);
             this.panel3.TabIndex = 27;
             this.panel3.Visible = false;
             // 
@@ -167,7 +170,7 @@
             this.btnHieuChinh.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnHieuChinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHieuChinh.ForeColor = System.Drawing.Color.White;
-            this.btnHieuChinh.Location = new System.Drawing.Point(928, 14);
+            this.btnHieuChinh.Location = new System.Drawing.Point(835, 14);
             this.btnHieuChinh.Margin = new System.Windows.Forms.Padding(2);
             this.btnHieuChinh.Name = "btnHieuChinh";
             this.btnHieuChinh.Size = new System.Drawing.Size(131, 26);
@@ -182,7 +185,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(849, 14);
+            this.button2.Location = new System.Drawing.Point(757, 14);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(73, 26);
@@ -222,14 +225,21 @@
             this.label4.TabIndex = 33;
             this.label4.Text = "Chọn phương thức tìm kiếm:";
             // 
-            // dataGridView1
+            // dtgvQLThuoc
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Menu;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 48);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1033, 433);
-            this.dataGridView1.TabIndex = 0;
+            this.dtgvQLThuoc.AllowUserToAddRows = false;
+            this.dtgvQLThuoc.AllowUserToDeleteRows = false;
+            this.dtgvQLThuoc.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.dtgvQLThuoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvQLThuoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_thuoc,
+            this.soluong,
+            this.chatluong,
+            this.id_loaithuoc});
+            this.dtgvQLThuoc.Location = new System.Drawing.Point(26, 48);
+            this.dtgvQLThuoc.Name = "dtgvQLThuoc";
+            this.dtgvQLThuoc.Size = new System.Drawing.Size(940, 433);
+            this.dtgvQLThuoc.TabIndex = 0;
             // 
             // btnAddRoom
             // 
@@ -247,6 +257,34 @@
             this.btnAddRoom.Text = "Thông Tin Thuốc";
             this.btnAddRoom.UseVisualStyleBackColor = false;
             // 
+            // id_thuoc
+            // 
+            this.id_thuoc.DataPropertyName = "id_thuoc";
+            this.id_thuoc.HeaderText = "Mã thuốc";
+            this.id_thuoc.Name = "id_thuoc";
+            this.id_thuoc.Width = 160;
+            // 
+            // soluong
+            // 
+            this.soluong.DataPropertyName = "soluong";
+            this.soluong.HeaderText = "Số lượng";
+            this.soluong.Name = "soluong";
+            this.soluong.Width = 160;
+            // 
+            // chatluong
+            // 
+            this.chatluong.DataPropertyName = "chatluong";
+            this.chatluong.HeaderText = "Chất lượng";
+            this.chatluong.Name = "chatluong";
+            this.chatluong.Width = 160;
+            // 
+            // id_loaithuoc
+            // 
+            this.id_loaithuoc.DataPropertyName = "id_loaithuoc";
+            this.id_loaithuoc.HeaderText = "Mã loại thuốc";
+            this.id_loaithuoc.Name = "id_loaithuoc";
+            this.id_loaithuoc.Width = 160;
+            // 
             // ucThuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -256,12 +294,13 @@
             this.Controls.Add(this.btnAddRoom);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ucThuoc";
-            this.Size = new System.Drawing.Size(1212, 782);
+            this.Size = new System.Drawing.Size(1055, 782);
+            this.Load += new System.EventHandler(this.ucThuoc_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvQLThuoc)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -280,9 +319,13 @@
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvQLThuoc;
         private System.Windows.Forms.Button btnAddRoom;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_thuoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn chatluong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_loaithuoc;
     }
 }

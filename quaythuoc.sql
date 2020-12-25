@@ -1,4 +1,4 @@
-CREATE DATABASE QLQT2020
+﻿CREATE DATABASE QLQT2020
 Go
 
 USE QLQT2020
@@ -6,7 +6,7 @@ GO
 
 CREATE TABLE THONGTINCOBAN
 (
-	id_thongtincoban INT IDENTITY(1,1) PRIMARY KEY,
+	id_thongtincoban INT PRIMARY KEY,
 	ten NVARCHAR(100) NOT NULL,
 	diachi NVARCHAR(1000) NOT NULL,
 	sodienthoai NVARCHAR(1000) NOT NULL,
@@ -50,7 +50,7 @@ CREATE TABLE PHIEUDATHANG
 
 CREATE TABLE CHITIETDATHANG
 (
-	id_chitietdathang NVARCHAR(100) PRIMARY KEY,
+	id_chitietdathang INT IDENTITY(1,1) PRIMARY KEY,
 	tenhanghoa NVARCHAR(100) not null,
 	soluong INT not null,
 
@@ -72,6 +72,7 @@ CREATE TABLE THONGTINBAOQUAN
 	id_baoquan INT IDENTITY(1,1) PRIMARY KEY,
 	khuvuc NVARCHAR(100) NOT NULL,
 	vitri INT NOT NULL,
+	soluong INT,
 	nhietdo INT NOT NULL,
 	cachthuc NVARCHAR(1000) NOT NULL
 )
@@ -86,9 +87,9 @@ CREATE TABLE THONGTINLUUTRU
 	nhasanxuat NVARCHAR(1000),
 	tenthuoc NVARCHAR(100),
 	hansudung DATETIME,
-	giathanh NVARCHAR(100),
+	giathanh INT,
 	huongdansudung NVARCHAR(1000),
-	thuocdactri NVARCHAR(10),
+	loai NVARCHAR(10),
 
 	id_baoquan INT foreign key references THONGTINBAOQUAN(id_baoquan),
 	id_nhacungcap INT foreign key references NHACUNGCAP(id_nhacungcap),
@@ -107,7 +108,7 @@ CREATE TABLE CHITIETTONKHO
 
 CREATE TABLE THUOC
 (
-	id_thuoc INT IDENTITY(1,1) PRIMARY KEY,
+	id_thuoc NVARCHAR(100) PRIMARY KEY,
 	soluong INT NOT NULL,
 	chatluong NVARCHAR(100) NOT NULL,
 
@@ -123,8 +124,8 @@ CREATE TABLE BAOHIEMYTE
 CREATE TABLE HOADONBANTHUOC
 (
 	id_hoadon NVARCHAR(100) PRIMARY KEY,
-	ngaylap DATETIME not null,
-	tongtien NVARCHAR(100) not null,
+	ngaylap DATETIME,
+	tongtien NVARCHAR(100),
 	bacsikedon NVARCHAR(100),
 	chuandoanbenh NVARCHAR(100),
 	sobaohiemyte NVARCHAR(100),
@@ -139,7 +140,19 @@ CREATE TABLE CHITIETKETHUOC
 	id_chitietkethuoc INT IDENTITY(1,1) PRIMARY KEY,
 	lieuluong INT not null,
 
-	id_thuoc INT foreign key references THUOC(id_thuoc),
+	id_thuoc NVARCHAR(100) foreign key references THUOC(id_thuoc),
 	id_hoadon NVARCHAR(100) foreign key references HOADONBANTHUOC(id_hoadon)
 )
 
+CREATE TABLE MAHIENTAI
+(
+	id_mahientai INT PRIMARY KEY,
+	id_thongtincoban INT,
+	id_hoadon INT,
+	id_phieudathang INT,
+	id_phieunhanhang INT,
+	id_phieutonkho INT,
+	id_thuockedon INT,
+	id_thuockhongkedon INT,
+	id_thucphamchucnang INT
+)

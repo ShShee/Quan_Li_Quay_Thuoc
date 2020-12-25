@@ -22,5 +22,17 @@ namespace QuanLyQuayThuoc.BUS
         {
             return PermissionDAL.Instance.Permission(username);
         }
+        public int GetId_nhanvien(string username)
+        {
+            return PermissionDAL.Instance.GetId_nhanvien(username);
+        }
+        public string GetTen_nhanvien(string id)
+        {
+            return PermissionDAL.Instance.GetTen_nhanvien(id);
+        }
+        public int GetId_hoadon()
+        {
+            return PermissionDAL.Instance.GetId_hoadon();
+        }
     }
 }

@@ -28,6 +28,7 @@ namespace QuanLyQuayThuoc
                 fQLQT f = new fQLQT();
                 this.Hide();
                 f.Permission_to_access = IsManager(userName);
+                f.SetID(PermissionBUS.Instance.GetId_nhanvien(userName));
                 f.ShowDialog();
             }
             else
@@ -42,7 +43,7 @@ namespace QuanLyQuayThuoc
         }
         bool IsManager(string username)
         {
-            if (PermissionBUS.Instance.Permission(username) == "Manager")
+            if (PermissionBUS.Instance.Permission(username) == "manager")
                 return true;
             else
                 return false;
