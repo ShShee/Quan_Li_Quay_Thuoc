@@ -37,7 +37,7 @@ namespace QuanLyQuayThuoc.DTO
             this.Solo = row["solo"].ToString();
             this.Nhasanxuat = row["nhasanxuat"].ToString();
             this.Tenthuoc = row["tenthuoc"].ToString();
-            this.Hansudung = Convert.ToDateTime(row["hansudung"]).ToString("d");
+            this.Hansudung = Convert.ToDateTime(row["hansudung"]).ToString("dd/MM/yyyy");
             this.Giathanh = (int)Convert.ToInt32(row["giathanh"].ToString());
             this.Huongdansudung = row["huongdansudung"].ToString();
             this.Loai = row["loai"].ToString();
