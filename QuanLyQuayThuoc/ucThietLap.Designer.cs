@@ -66,8 +66,6 @@
             this.button12 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
             this.button13 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
@@ -80,25 +78,25 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.dtgvNhacungcap = new System.Windows.Forms.DataGridView();
+            this.id_nhacungcap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sodienthoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giayphep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dtgvBaohiemyte = new System.Windows.Forms.DataGridView();
+            this.loaihinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tile = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.id_nhacungcap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sodienthoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giayphep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loaihinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tile = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel24.SuspendLayout();
@@ -517,8 +515,6 @@
             this.panel3.Controls.Add(this.button12);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.textBox14);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.textBox15);
             this.panel3.Controls.Add(this.button13);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.textBox16);
@@ -527,7 +523,7 @@
             this.panel3.Controls.Add(this.label13);
             this.panel3.Location = new System.Drawing.Point(724, 51);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(317, 233);
+            this.panel3.Size = new System.Drawing.Size(317, 203);
             this.panel3.TabIndex = 47;
             this.panel3.Visible = false;
             // 
@@ -545,7 +541,7 @@
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(185, 194);
+            this.button12.Location = new System.Drawing.Point(186, 166);
             this.button12.Margin = new System.Windows.Forms.Padding(2);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(46, 25);
@@ -571,34 +567,13 @@
             this.textBox14.Size = new System.Drawing.Size(186, 26);
             this.textBox14.TabIndex = 37;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(103, 162);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(35, 20);
-            this.label10.TabIndex = 33;
-            this.label10.Text = "Mã:";
-            this.label10.Visible = false;
-            // 
-            // textBox15
-            // 
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(144, 159);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(78, 26);
-            this.textBox15.TabIndex = 33;
-            this.textBox15.Visible = false;
-            // 
             // button13
             // 
             this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(101)))), ((int)(((byte)(132)))));
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(246, 194);
+            this.button13.Location = new System.Drawing.Point(245, 166);
             this.button13.Margin = new System.Windows.Forms.Padding(2);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(47, 25);
@@ -728,6 +703,39 @@
             this.dtgvNhacungcap.Size = new System.Drawing.Size(1033, 433);
             this.dtgvNhacungcap.TabIndex = 41;
             // 
+            // id_nhacungcap
+            // 
+            this.id_nhacungcap.DataPropertyName = "id_nhacungcap";
+            this.id_nhacungcap.HeaderText = "Mã nhà cung cấp";
+            this.id_nhacungcap.Name = "id_nhacungcap";
+            this.id_nhacungcap.Width = 40;
+            // 
+            // ten
+            // 
+            this.ten.DataPropertyName = "ten";
+            this.ten.HeaderText = "Tên";
+            this.ten.Name = "ten";
+            this.ten.Width = 220;
+            // 
+            // diachi
+            // 
+            this.diachi.DataPropertyName = "diachi";
+            this.diachi.HeaderText = "Địa chỉ";
+            this.diachi.Name = "diachi";
+            this.diachi.Width = 200;
+            // 
+            // sodienthoai
+            // 
+            this.sodienthoai.DataPropertyName = "sodienthoai";
+            this.sodienthoai.HeaderText = "Số điện thoại";
+            this.sodienthoai.Name = "sodienthoai";
+            // 
+            // giayphep
+            // 
+            this.giayphep.DataPropertyName = "giayphep";
+            this.giayphep.HeaderText = "Giấy phép";
+            this.giayphep.Name = "giayphep";
+            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -813,6 +821,18 @@
             this.dtgvBaohiemyte.Size = new System.Drawing.Size(270, 150);
             this.dtgvBaohiemyte.TabIndex = 19;
             // 
+            // loaihinh
+            // 
+            this.loaihinh.DataPropertyName = "loaihinh";
+            this.loaihinh.HeaderText = "Loại hình";
+            this.loaihinh.Name = "loaihinh";
+            // 
+            // tile
+            // 
+            this.tile.DataPropertyName = "tile";
+            this.tile.HeaderText = "Tỉ lệ %";
+            this.tile.Name = "tile";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -879,51 +899,6 @@
             this.button8.TabIndex = 9;
             this.button8.Text = "Thêm";
             this.button8.UseVisualStyleBackColor = false;
-            // 
-            // id_nhacungcap
-            // 
-            this.id_nhacungcap.DataPropertyName = "id_nhacungcap";
-            this.id_nhacungcap.HeaderText = "Mã nhà cung cấp";
-            this.id_nhacungcap.Name = "id_nhacungcap";
-            this.id_nhacungcap.Width = 40;
-            // 
-            // ten
-            // 
-            this.ten.DataPropertyName = "ten";
-            this.ten.HeaderText = "Tên";
-            this.ten.Name = "ten";
-            this.ten.Width = 220;
-            // 
-            // diachi
-            // 
-            this.diachi.DataPropertyName = "diachi";
-            this.diachi.HeaderText = "Địa chỉ";
-            this.diachi.Name = "diachi";
-            this.diachi.Width = 200;
-            // 
-            // sodienthoai
-            // 
-            this.sodienthoai.DataPropertyName = "sodienthoai";
-            this.sodienthoai.HeaderText = "Số điện thoại";
-            this.sodienthoai.Name = "sodienthoai";
-            // 
-            // giayphep
-            // 
-            this.giayphep.DataPropertyName = "giayphep";
-            this.giayphep.HeaderText = "Giấy phép";
-            this.giayphep.Name = "giayphep";
-            // 
-            // loaihinh
-            // 
-            this.loaihinh.DataPropertyName = "loaihinh";
-            this.loaihinh.HeaderText = "Loại hình";
-            this.loaihinh.Name = "loaihinh";
-            // 
-            // tile
-            // 
-            this.tile.DataPropertyName = "tile";
-            this.tile.HeaderText = "Tỉ lệ %";
-            this.tile.Name = "tile";
             // 
             // ucThietLap
             // 
@@ -1012,8 +987,6 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox16;

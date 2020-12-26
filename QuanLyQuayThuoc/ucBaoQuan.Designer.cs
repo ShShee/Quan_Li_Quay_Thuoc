@@ -30,12 +30,12 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,8 +56,6 @@
             this.nhietdo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cachthuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAddRoom = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvThongtinbaoquan)).BeginInit();
@@ -88,8 +86,6 @@
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.textBox5);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.textBox7);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.richTextBox1);
             this.panel3.Controls.Add(this.label5);
@@ -99,9 +95,27 @@
             this.panel3.Controls.Add(this.label4);
             this.panel3.Location = new System.Drawing.Point(870, 49);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(317, 403);
+            this.panel3.Size = new System.Drawing.Size(317, 381);
             this.panel3.TabIndex = 27;
             this.panel3.Visible = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(102, 80);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(133, 26);
+            this.textBox2.TabIndex = 42;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 83);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 20);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Số lượng:";
             // 
             // button4
             // 
@@ -109,7 +123,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(192, 366);
+            this.button4.Location = new System.Drawing.Point(192, 345);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(43, 25);
@@ -123,7 +137,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(131, 366);
+            this.button3.Location = new System.Drawing.Point(133, 345);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(46, 25);
@@ -149,34 +163,13 @@
             this.textBox5.Size = new System.Drawing.Size(133, 26);
             this.textBox5.TabIndex = 37;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(62, 334);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 20);
-            this.label7.TabIndex = 33;
-            this.label7.Text = "Mã bảo quản:";
-            this.label7.Visible = false;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(174, 331);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(78, 26);
-            this.textBox7.TabIndex = 33;
-            this.textBox7.Visible = false;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(101)))), ((int)(((byte)(132)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(250, 366);
+            this.button1.Location = new System.Drawing.Point(250, 345);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(47, 25);
@@ -371,24 +364,6 @@
             this.btnAddRoom.Text = "Thông Tin Bảo Quản";
             this.btnAddRoom.UseVisualStyleBackColor = false;
             // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(102, 80);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(133, 26);
-            this.textBox2.TabIndex = 42;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 20);
-            this.label1.TabIndex = 41;
-            this.label1.Text = "Số lượng:";
-            // 
             // ucBaoQuan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -428,8 +403,6 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button btnHieuChinh;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;

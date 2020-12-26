@@ -15,6 +15,7 @@ namespace QuanLyQuayThuoc
 {
     public partial class ucHome : UserControl
     {
+        private string id_nhanvien="";
         public ucHome()
         {
             InitializeComponent();
@@ -73,7 +74,7 @@ namespace QuanLyQuayThuoc
                 {
                      QLHoadonBUS.Instance.ExportDataTableToPdf(dtgvChitiethoadon, sfd.FileName, " HÓA ĐƠN THANH TOÁN ", 
                          txbId_hoadon.Text, dateTimePicker1.Value.ToString("dd/MM/yyyy"), txbTongtien.Text, txbBacsi.Text, txbChuandoan.Text, txbSobaohiem.Text, 
-                         txbId_nhanvien.Text,txbTen_nhanvien.Text, txbNguoimua.Text, txbDiachi.Text, txbSodienthoai.Text, cbbLoaihinh.Text);
+                         id_nhanvien,txbTen_nhanvien.Text, txbNguoimua.Text, txbDiachi.Text, txbSodienthoai.Text, cbbLoaihinh.Text);
                 }
             }
             QLHoadonBUS.Instance.Capnhathoadon();
@@ -86,8 +87,8 @@ namespace QuanLyQuayThuoc
         }
         public void GetId_nhanvien(string id)
         {
-            txbId_nhanvien.Text = id;
-            txbTen_nhanvien.Text = PermissionBUS.Instance.GetTen_nhanvien(txbId_nhanvien.Text);
+            id_nhanvien = id;
+            txbTen_nhanvien.Text = PermissionBUS.Instance.GetTen_nhanvien(id_nhanvien);
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)

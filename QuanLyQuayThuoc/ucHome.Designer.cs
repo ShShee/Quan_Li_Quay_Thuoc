@@ -60,7 +60,6 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.btnLayThuoc = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txbId_nhanvien = new System.Windows.Forms.TextBox();
             this.txbChuandoan = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.txbSodienthoai = new System.Windows.Forms.TextBox();
@@ -463,7 +462,6 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Window;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.txbId_nhanvien);
             this.panel2.Controls.Add(this.txbChuandoan);
             this.panel2.Controls.Add(this.label18);
             this.panel2.Controls.Add(this.txbSodienthoai);
@@ -487,16 +485,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(581, 465);
             this.panel2.TabIndex = 33;
-            // 
-            // txbId_nhanvien
-            // 
-            this.txbId_nhanvien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbId_nhanvien.Location = new System.Drawing.Point(432, 46);
-            this.txbId_nhanvien.Name = "txbId_nhanvien";
-            this.txbId_nhanvien.ReadOnly = true;
-            this.txbId_nhanvien.Size = new System.Drawing.Size(120, 26);
-            this.txbId_nhanvien.TabIndex = 42;
-            this.txbId_nhanvien.Visible = false;
             // 
             // txbChuandoan
             // 
@@ -844,7 +832,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txbDiachi;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txbId_nhanvien;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_thuoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenthuoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn donvi;

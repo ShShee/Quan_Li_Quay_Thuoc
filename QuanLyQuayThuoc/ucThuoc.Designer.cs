@@ -33,8 +33,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnHieuChinh = new System.Windows.Forms.Button();
@@ -43,11 +41,11 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dtgvQLThuoc = new System.Windows.Forms.DataGridView();
-            this.btnAddRoom = new System.Windows.Forms.Button();
             this.id_thuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chatluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_loaithuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAddRoom = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvQLThuoc)).BeginInit();
@@ -103,13 +101,11 @@
             this.panel3.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.textBox4);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(732, 48);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(233, 79);
+            this.panel3.Size = new System.Drawing.Size(233, 46);
             this.panel3.TabIndex = 27;
             this.panel3.Visible = false;
             // 
@@ -119,37 +115,18 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(178, 8);
+            this.button4.Location = new System.Drawing.Point(168, 9);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(44, 59);
+            this.button4.Size = new System.Drawing.Size(44, 26);
             this.button4.TabIndex = 28;
             this.button4.Text = "Lưu thay đổi";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(75, 8);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(89, 26);
-            this.textBox2.TabIndex = 33;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 20);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "Mã loại:";
-            // 
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(102, 41);
+            this.textBox4.Location = new System.Drawing.Point(101, 8);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(62, 26);
             this.textBox4.TabIndex = 33;
@@ -158,7 +135,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 44);
+            this.label1.Location = new System.Drawing.Point(6, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 20);
             this.label1.TabIndex = 30;
@@ -241,22 +218,6 @@
             this.dtgvQLThuoc.Size = new System.Drawing.Size(940, 433);
             this.dtgvQLThuoc.TabIndex = 0;
             // 
-            // btnAddRoom
-            // 
-            this.btnAddRoom.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnAddRoom.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnAddRoom.Enabled = false;
-            this.btnAddRoom.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddRoom.ForeColor = System.Drawing.Color.White;
-            this.btnAddRoom.Location = new System.Drawing.Point(16, 18);
-            this.btnAddRoom.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddRoom.Name = "btnAddRoom";
-            this.btnAddRoom.Size = new System.Drawing.Size(192, 45);
-            this.btnAddRoom.TabIndex = 5;
-            this.btnAddRoom.Text = "Thông Tin Thuốc";
-            this.btnAddRoom.UseVisualStyleBackColor = false;
-            // 
             // id_thuoc
             // 
             this.id_thuoc.DataPropertyName = "id_thuoc";
@@ -285,6 +246,22 @@
             this.id_loaithuoc.Name = "id_loaithuoc";
             this.id_loaithuoc.Width = 160;
             // 
+            // btnAddRoom
+            // 
+            this.btnAddRoom.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnAddRoom.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnAddRoom.Enabled = false;
+            this.btnAddRoom.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddRoom.ForeColor = System.Drawing.Color.White;
+            this.btnAddRoom.Location = new System.Drawing.Point(16, 18);
+            this.btnAddRoom.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddRoom.Name = "btnAddRoom";
+            this.btnAddRoom.Size = new System.Drawing.Size(192, 45);
+            this.btnAddRoom.TabIndex = 5;
+            this.btnAddRoom.Text = "Thông Tin Thuốc";
+            this.btnAddRoom.UseVisualStyleBackColor = false;
+            // 
             // ucThuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,7 +271,7 @@
             this.Controls.Add(this.btnAddRoom);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ucThuoc";
-            this.Size = new System.Drawing.Size(1055, 782);
+            this.Size = new System.Drawing.Size(1055, 602);
             this.Load += new System.EventHandler(this.ucThuoc_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -313,8 +290,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox textBox3;

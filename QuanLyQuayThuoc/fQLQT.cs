@@ -12,6 +12,7 @@ namespace QuanLyQuayThuoc
 {
     public partial class fQLQT : Form
     {
+        private string id_nhanvien = "";
         private bool Accessibility=true;
         public fQLQT()
         {
@@ -31,14 +32,14 @@ namespace QuanLyQuayThuoc
             set { Accessibility = value; }
         }
 
-        public void SetID(int id_nhanvien)
+        public void SetID(int nhanvien)
         {
-            txbID.Text = id_nhanvien.ToString();
+            id_nhanvien = nhanvien.ToString();
         }
 
         private void fQLQT_Load(object sender, EventArgs e)
         {
-            ucHome1.GetId_nhanvien(txbID.Text);
+            ucHome1.GetId_nhanvien(id_nhanvien);
             if (Accessibility == false)
             {
                 button_thietlap.Visible = false;
