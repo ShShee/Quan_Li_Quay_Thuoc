@@ -9,11 +9,12 @@ namespace QuanLyQuayThuoc.DTO
 {
     public class Thongtinluutru
     {
-        public Thongtinluutru(int id_loaithuoc,int soluong,int donluong, string sogiayphep,string solo,string nhasanxuat,string tenthuoc,
+        public Thongtinluutru(int id_loaithuoc,int soluong,string donvi,int donluong, string sogiayphep,string solo,string nhasanxuat,string tenthuoc,
             string hansudung,int giathanh, string huongdansudung,string loai,int id_baoquan,int id_nhacungcap,string id_phieunhanhang)
         {
             this.Id_loaithuoc = id_loaithuoc;
             this.Soluong = soluong;
+            this.Donvi = donvi;
             this.Donluong = donluong;
             this.Sogiayphep = sogiayphep;
             this.Solo = solo;
@@ -32,6 +33,7 @@ namespace QuanLyQuayThuoc.DTO
         {
             this.Id_loaithuoc = (int)Convert.ToInt32(row["id_loaithuoc"].ToString());
             this.Soluong = (int)Convert.ToInt32(row["soluong"].ToString());
+            this.Donvi = row["donvi"].ToString();
             this.Donluong = (int)Convert.ToInt32(row["donluong"].ToString());
             this.Sogiayphep = row["sogiayphep"].ToString();
             this.Solo = row["solo"].ToString();
@@ -48,6 +50,7 @@ namespace QuanLyQuayThuoc.DTO
 
         private int id_loaithuoc;
         private int soluong;
+        private string donvi;
         private int donluong;
         private string sogiayphep;
         private string solo;
@@ -65,6 +68,11 @@ namespace QuanLyQuayThuoc.DTO
         {
             get { return id_loaithuoc; }
             set { id_loaithuoc = value; }
+        }
+        public string Donvi
+        {
+            get { return donvi; }
+            set { donvi = value; }
         }
         public int Soluong
         {
