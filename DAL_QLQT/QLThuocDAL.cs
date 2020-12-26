@@ -26,7 +26,7 @@ namespace QuanLyQuayThuoc.DAL
         }
         public DataTable LoadIdthuocList(string tenthuoc)
         {
-            string query = "SELECT id_thuoc FROM DBO.THUOC,DBO.THONGTINLUUTRU where THUOC.id_loaithuoc=THONGTINLUUTRU.id_loaithuoc and THONGTINLUUTRU.tenthuoc='"+tenthuoc+"'";
+            string query = "SELECT id_thuoc FROM DBO.THUOC,DBO.THONGTINLUUTRU where THUOC.soluong>0 and THUOC.id_loaithuoc=THONGTINLUUTRU.id_loaithuoc and THONGTINLUUTRU.tenthuoc='"+tenthuoc+"'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public int GetSoluong(string id_thuoc)

@@ -22,7 +22,7 @@ namespace QuanLyQuayThuoc.DAL
         }
         public DataTable LoadTenthuocList(bool kedon)
         {
-            string distinct="",query = "SELECT tenthuoc FROM DBO.THONGTINLUUTRU where soluong>0 and loai";
+            string distinct="",query = "SELECT tenthuoc FROM DBO.THONGTINLUUTRU where loai";
             if (kedon == true) distinct = "="; else distinct = "!=";
             query += distinct + " 'VN'";
             return DataProvider.Instance.ExecuteQuery(query);
