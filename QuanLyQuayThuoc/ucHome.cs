@@ -67,9 +67,17 @@ namespace QuanLyQuayThuoc
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            if (panel3.Visible == true && cbbLoaihinh.Text != "none" && txbSobaohiem.Text == "")
+            if (panel3.Visible == true && txbBacsi.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập vào số bảo hiểm y tế !!!");
+                MessageBox.Show("Vui lòng nhập tên bác sĩ đã kê đơn !!!");
+            }
+            else if (panel3.Visible == true && cbbLoaihinh.Text != "none" && txbSobaohiem.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập vào số bảo hiểm y tế !!!");             
+            }
+            else if (panel3.Visible == true && cbbLoaihinh.Text == "none" && txbSobaohiem.Text != "")
+            {
+                MessageBox.Show("Vui lòng chọn đúng loại !!!");
             }
             else
             {

@@ -36,6 +36,21 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dtgvThongtinluutru = new System.Windows.Forms.DataGridView();
+            this.id_loaithuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donvi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sogiayphep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.solo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nhasanxuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hansudung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giathanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.huongdansudung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_baoquan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_nhacungcap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_phieunhanhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -62,21 +77,6 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.id_loaithuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donvi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sogiayphep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.solo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nhasanxuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hansudung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giathanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.huongdansudung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_baoquan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_nhacungcap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_phieunhanhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvThongtinluutru)).BeginInit();
             this.panel3.SuspendLayout();
@@ -207,6 +207,96 @@
             this.dtgvThongtinluutru.Size = new System.Drawing.Size(1450, 479);
             this.dtgvThongtinluutru.TabIndex = 0;
             // 
+            // id_loaithuoc
+            // 
+            this.id_loaithuoc.DataPropertyName = "id_loaithuoc";
+            this.id_loaithuoc.HeaderText = "Mã loại thuốc";
+            this.id_loaithuoc.Name = "id_loaithuoc";
+            // 
+            // soluong
+            // 
+            this.soluong.DataPropertyName = "soluong";
+            this.soluong.HeaderText = "Số lượng";
+            this.soluong.Name = "soluong";
+            // 
+            // donvi
+            // 
+            this.donvi.DataPropertyName = "donvi";
+            this.donvi.HeaderText = "Đơn vị";
+            this.donvi.Name = "donvi";
+            // 
+            // donluong
+            // 
+            this.donluong.DataPropertyName = "donluong";
+            this.donluong.HeaderText = "Đơn lượng";
+            this.donluong.Name = "donluong";
+            // 
+            // sogiayphep
+            // 
+            this.sogiayphep.DataPropertyName = "sogiayphep";
+            this.sogiayphep.HeaderText = "Số giấy phép";
+            this.sogiayphep.Name = "sogiayphep";
+            // 
+            // solo
+            // 
+            this.solo.DataPropertyName = "solo";
+            this.solo.HeaderText = "Số lô";
+            this.solo.Name = "solo";
+            // 
+            // nhasanxuat
+            // 
+            this.nhasanxuat.DataPropertyName = "nhasanxuat";
+            this.nhasanxuat.HeaderText = "Nhà sản xuất";
+            this.nhasanxuat.Name = "nhasanxuat";
+            // 
+            // tenthuoc
+            // 
+            this.tenthuoc.DataPropertyName = "tenthuoc";
+            this.tenthuoc.HeaderText = "Tên thuốc";
+            this.tenthuoc.Name = "tenthuoc";
+            // 
+            // hansudung
+            // 
+            this.hansudung.DataPropertyName = "hansudung";
+            this.hansudung.HeaderText = "Hạn sử dụng";
+            this.hansudung.Name = "hansudung";
+            // 
+            // giathanh
+            // 
+            this.giathanh.DataPropertyName = "giathanh";
+            this.giathanh.HeaderText = "Giá thành";
+            this.giathanh.Name = "giathanh";
+            // 
+            // huongdansudung
+            // 
+            this.huongdansudung.DataPropertyName = "huongdansudung";
+            this.huongdansudung.HeaderText = "Hướng dẫn sử dụng";
+            this.huongdansudung.Name = "huongdansudung";
+            // 
+            // loai
+            // 
+            this.loai.DataPropertyName = "loai";
+            this.loai.HeaderText = "Loại";
+            this.loai.Name = "loai";
+            // 
+            // id_baoquan
+            // 
+            this.id_baoquan.DataPropertyName = "id_baoquan";
+            this.id_baoquan.HeaderText = "Mã bảo quản";
+            this.id_baoquan.Name = "id_baoquan";
+            // 
+            // id_nhacungcap
+            // 
+            this.id_nhacungcap.DataPropertyName = "id_nhacungcap";
+            this.id_nhacungcap.HeaderText = "Mã nhà cung cấp";
+            this.id_nhacungcap.Name = "id_nhacungcap";
+            // 
+            // id_phieunhanhang
+            // 
+            this.id_phieunhanhang.DataPropertyName = "id_phieunhanhang";
+            this.id_phieunhanhang.HeaderText = "Mã phiếu nhận hàng";
+            this.id_phieunhanhang.Name = "id_phieunhanhang";
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -267,6 +357,10 @@
             // 
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "VN",
+            "VD",
+            "ATTP"});
             this.comboBox2.Location = new System.Drawing.Point(423, 46);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 28);
@@ -492,96 +586,6 @@
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(78, 26);
             this.textBox2.TabIndex = 33;
-            // 
-            // id_loaithuoc
-            // 
-            this.id_loaithuoc.DataPropertyName = "id_loaithuoc";
-            this.id_loaithuoc.HeaderText = "Mã loại thuốc";
-            this.id_loaithuoc.Name = "id_loaithuoc";
-            // 
-            // soluong
-            // 
-            this.soluong.DataPropertyName = "soluong";
-            this.soluong.HeaderText = "Số lượng";
-            this.soluong.Name = "soluong";
-            // 
-            // donvi
-            // 
-            this.donvi.DataPropertyName = "donvi";
-            this.donvi.HeaderText = "Đơn vị";
-            this.donvi.Name = "donvi";
-            // 
-            // donluong
-            // 
-            this.donluong.DataPropertyName = "donluong";
-            this.donluong.HeaderText = "Đơn lượng";
-            this.donluong.Name = "donluong";
-            // 
-            // sogiayphep
-            // 
-            this.sogiayphep.DataPropertyName = "sogiayphep";
-            this.sogiayphep.HeaderText = "Số giấy phép";
-            this.sogiayphep.Name = "sogiayphep";
-            // 
-            // solo
-            // 
-            this.solo.DataPropertyName = "solo";
-            this.solo.HeaderText = "Số lô";
-            this.solo.Name = "solo";
-            // 
-            // nhasanxuat
-            // 
-            this.nhasanxuat.DataPropertyName = "nhasanxuat";
-            this.nhasanxuat.HeaderText = "Nhà sản xuất";
-            this.nhasanxuat.Name = "nhasanxuat";
-            // 
-            // tenthuoc
-            // 
-            this.tenthuoc.DataPropertyName = "tenthuoc";
-            this.tenthuoc.HeaderText = "Tên thuốc";
-            this.tenthuoc.Name = "tenthuoc";
-            // 
-            // hansudung
-            // 
-            this.hansudung.DataPropertyName = "hansudung";
-            this.hansudung.HeaderText = "Hạn sử dụng";
-            this.hansudung.Name = "hansudung";
-            // 
-            // giathanh
-            // 
-            this.giathanh.DataPropertyName = "giathanh";
-            this.giathanh.HeaderText = "Giá thành";
-            this.giathanh.Name = "giathanh";
-            // 
-            // huongdansudung
-            // 
-            this.huongdansudung.DataPropertyName = "huongdansudung";
-            this.huongdansudung.HeaderText = "Hướng dẫn sử dụng";
-            this.huongdansudung.Name = "huongdansudung";
-            // 
-            // loai
-            // 
-            this.loai.DataPropertyName = "loai";
-            this.loai.HeaderText = "Loại";
-            this.loai.Name = "loai";
-            // 
-            // id_baoquan
-            // 
-            this.id_baoquan.DataPropertyName = "id_baoquan";
-            this.id_baoquan.HeaderText = "Mã bảo quản";
-            this.id_baoquan.Name = "id_baoquan";
-            // 
-            // id_nhacungcap
-            // 
-            this.id_nhacungcap.DataPropertyName = "id_nhacungcap";
-            this.id_nhacungcap.HeaderText = "Mã nhà cung cấp";
-            this.id_nhacungcap.Name = "id_nhacungcap";
-            // 
-            // id_phieunhanhang
-            // 
-            this.id_phieunhanhang.DataPropertyName = "id_phieunhanhang";
-            this.id_phieunhanhang.HeaderText = "Mã phiếu nhận hàng";
-            this.id_phieunhanhang.Name = "id_phieunhanhang";
             // 
             // ucLuuTru
             // 
