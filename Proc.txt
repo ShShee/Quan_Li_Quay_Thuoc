@@ -34,7 +34,7 @@ GO
 
 --them chi tiet ke thuoc
 CREATE PROC USP_Themhoadon
-(@lieuluong INT,@id_thuoc NVARCHAR(100),@id_hoadon INT)
+(@lieuluong INT,@id_thuoc NVARCHAR(100),@id_hoadon NVARCHAR(100))
 AS
 BEGIN
 UPDATE THUOC
@@ -86,3 +86,5 @@ WHERE id_thuoc=@id_thuoc
 DELETE FROM CHITIETKETHUOC WHERE id_chitietkethuoc=@id_chitietkethuoc
 end
 go
+
+

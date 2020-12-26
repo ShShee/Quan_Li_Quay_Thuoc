@@ -81,6 +81,7 @@ CREATE TABLE THONGTINLUUTRU
 (
 	id_loaithuoc INT IDENTITY(1,1) PRIMARY KEY,
 	soluong INT,
+	donvi NVARCHAR(100),
 	donluong INT,
 	sogiayphep NVARCHAR(100),
 	solo NVARCHAR(10),
