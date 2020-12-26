@@ -38,7 +38,7 @@ namespace QuanLyQuayThuoc
 
         private void fQLQT_Load(object sender, EventArgs e)
         {
-        //    ucHome1.GetId_nhanvien(txbID.Text);
+            ucHome1.GetId_nhanvien(txbID.Text);
             if (Accessibility == false)
             {
                 button_thietlap.Visible = false;

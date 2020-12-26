@@ -9,10 +9,11 @@ namespace QuanLyQuayThuoc.DTO
 {
     public class Chitietkethuoc
     {
-        public Chitietkethuoc(string id_thuoc, string tenthuoc, int lieuluong,int giathanh,int id_chitietkethuoc)
+        public Chitietkethuoc(string id_thuoc, string tenthuoc,string donvi, int lieuluong,int giathanh,int id_chitietkethuoc)
         {
             this.Id_thuoc= id_thuoc;
             this.Tenthuoc = tenthuoc;
+            this.Donvi = donvi;
             this.Lieuluong = lieuluong;
             this.Giathanh = giathanh;
             this.Id_chitietkethuoc = id_chitietkethuoc;
@@ -22,15 +23,19 @@ namespace QuanLyQuayThuoc.DTO
         {
             this.Id_thuoc = row["id_thuoc"].ToString();
             this.Tenthuoc = row["tenthuoc"].ToString();
+            this.Donvi = row["donvi"].ToString();
             this.Lieuluong = (int)Convert.ToInt32(row["lieuluong"].ToString());
             this.Giathanh = (int)Convert.ToInt32(row["giathanh"].ToString());
+            this.Thanhtien = (int)Convert.ToInt32(row["giathanh"].ToString()) * (int)Convert.ToInt32(row["lieuluong"].ToString());
             this.Id_chitietkethuoc = (int)Convert.ToInt32(row["id_chitietkethuoc"].ToString());
         }
 
         private string id_thuoc;
         private string tenthuoc;
+        private string donvi;
         private int lieuluong;
         private int giathanh;
+        private int thanhtien;
         private int id_chitietkethuoc;
 
         public string Id_thuoc
@@ -43,6 +48,11 @@ namespace QuanLyQuayThuoc.DTO
             get { return tenthuoc; }
             set { tenthuoc= value; }
         }
+        public string Donvi
+        {
+            get { return donvi; }
+            set { donvi = value; }
+        }
         public int Lieuluong
         {
             get { return lieuluong; }
@@ -52,6 +62,11 @@ namespace QuanLyQuayThuoc.DTO
         {
             get { return giathanh; }
             set { giathanh = value; }
+        }
+        public int Thanhtien
+        {
+            get { return thanhtien; }
+            set { thanhtien = value; }
         }
         public int Id_chitietkethuoc
         {

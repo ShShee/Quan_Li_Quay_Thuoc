@@ -37,5 +37,30 @@ namespace QuanLyQuayThuoc.DAL
         {
             DataProvider.Instance.ExecuteQuery("USP_Xoahoadon @id_chitietkethuoc , @id_thuoc , @lieuluong", new object[] { id_chitietkethuoc,id_thuoc,lieuluong });
         }
+        public void Capnhathoadon()
+        {
+            DataProvider.Instance.ExecuteQuery("UPDATE MAHIENTAI SET id_hoadon = id_hoadon + 1 WHERE id_mahientai = '1'");
+        }
+        public void Xuathoadon(string id_hoadon)
+        {
+            string query = "INSERT INTO HOADONBANTHUOC VALUES('" + id_hoadon + "','','','','','','1','1','none')";
+            DataProvider.Instance.ExecuteQuery(query);
+        }
+        public string Luuthongtin(string ten,string diachi,string sodienthoai)
+        {
+            int id = PermissionDAL.Instance.GetId_thongtincoban();
+            string query = "INSERT INTO THONGTINCOBAN VALUES('" + id + "',N'" + ten + "',N'" + diachi + "','" + sodienthoai + "')";
+            DataProvider.Instance.ExecuteQuery(query);
+            return id.ToString();
+        }
+        public void Luuhoadon(string id_hoadon,string ngaylap,string tongtien,string bacsikedon,string chuandoanbenh,string sobaohiemyte,string id_nhanvien,string id_thongtincoban,string loaihinh)
+        {
+            string query = "SET DATEFORMAT DMY " +
+                "UPDATE HOADONBANTHUOC " +
+                "SET ngaylap='" + ngaylap + "', tongtien='" + tongtien + "', bacsikedon= N'" + bacsikedon
+                + "', chuandoanbenh= N'" + chuandoanbenh + "', sobaohiemyte= '"+sobaohiemyte+"', id_nhanvien='"+id_nhanvien+"', id_thongtincoban= '"+id_thongtincoban+"', loaihinh='"+loaihinh
+                +"' WHERE id_hoadon='"+id_hoadon+"'";
+            DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

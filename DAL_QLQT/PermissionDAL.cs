@@ -41,5 +41,14 @@ namespace QuanLyQuayThuoc.DAL
             int id = result.Rows[0].Field<int>(0);
             return id+1;
         }
+        public int GetId_thongtincoban()
+        {
+            string query = "UPDATE MAHIENTAI SET id_thongtincoban=id_thongtincoban+1 WHERE id_mahientai='1'";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            query = "SELECT id_thongtincoban FROM MAHIENTAI WHERE id_mahientai='1'";
+            result = DataProvider.Instance.ExecuteQuery(query);
+            int id = result.Rows[0].Field<int>(0);
+            return id;
+        }
     }
 }

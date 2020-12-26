@@ -16,7 +16,7 @@ namespace QuanLyQuayThuoc
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fQLQT());
+            Application.Run(new fLogin());
         }
     }
 }

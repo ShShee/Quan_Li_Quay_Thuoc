@@ -49,71 +49,98 @@ namespace QuanLyQuayThuoc.BUS
         {
             QLHoadonDAL.Instance.Xoahoadon(id_chitietkethuoc,id_thuoc,lieuluong);
         }
-        //public DataTable LoadRevenueList(string month,string year)
-        //{
-        //    return RevenueDAL.Instance.LoadRevenueList(month, year);
-        //}
-        //    public void ExportDataTableToPdf(DataGridView dtblTable, String strPdfPath, string strHeader, string Month, string Year)
-        //    {
-        //        System.IO.FileStream fs = new FileStream(strPdfPath, FileMode.Create, FileAccess.Write, FileShare.Read);
-        //        Document document = new Document();
-        //        document.SetPageSize(iTextSharp.text.PageSize.A4);
-        //        PdfWriter writer = PdfWriter.GetInstance(document, fs);
-        //        document.Open();
-        //        string working = Environment.CurrentDirectory;
-        //        string ARIALUNI_TFF = Path.Combine(System.IO.Directory.GetParent(working).Parent.FullName, "ARIALUNI.TTF");
+        public void Capnhathoadon()
+        {
+            QLHoadonDAL.Instance.Capnhathoadon();
+        }
+        public void Xuathoadon(string id_hoadon)
+        {
+            QLHoadonDAL.Instance.Xuathoadon(id_hoadon);
+        }
 
-        //        BaseFont bf = BaseFont.CreateFont(ARIALUNI_TFF, BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
-        //        Font fontNormal = new Font(bf, 12, Font.NORMAL);
+        public void ExportDataTableToPdf(DataGridView dtblTable, String strPdfPath, string strHeader, 
+            string id_hoadon, string ngaylap, string tongtien, string bacsikedon, string chuandoanbenh, string sobaohiemyte, 
+            string id_nhanvien,string ten_nhanvien, string ten_khachhang, string diachi, string sodienthoai, string loaihinh)
+        {
+            QLHoadonDAL.Instance.Luuhoadon(id_hoadon, ngaylap, tongtien, bacsikedon, chuandoanbenh, sobaohiemyte, id_nhanvien, QLHoadonDAL.Instance.Luuthongtin(ten_khachhang, diachi, sodienthoai), loaihinh);
+            System.IO.FileStream fs = new FileStream(strPdfPath, FileMode.Create, FileAccess.Write, FileShare.Read);
+            Document document = new Document();
+            document.SetPageSize(iTextSharp.text.PageSize.A4);
+            PdfWriter writer = PdfWriter.GetInstance(document, fs);
+            document.Open();
+            string working = Environment.CurrentDirectory;
+            string ARIALUNI_TFF = Path.Combine(System.IO.Directory.GetParent(working).Parent.FullName, "ARIALUNI.TTF");
 
-        //        //Report Header
-        //        Font fntHead = new Font(bf, 16, Font.NORMAL);
-        //        Paragraph prgHeading = new Paragraph();
-        //        prgHeading.Alignment = Element.ALIGN_CENTER;
-        //        prgHeading.Add(new Chunk(strHeader.ToUpper(), fntHead));
-        //        document.Add(prgHeading);
+            BaseFont bf = BaseFont.CreateFont(ARIALUNI_TFF, BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
+            Font fontNormal = new Font(bf, 12, Font.NORMAL);
 
-        //        //Author
-        //        Paragraph prgAuthor = new Paragraph();
-        //        BaseFont btnAuthor = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
-        //        Font fntAuthor = new Font(bf, 8, Font.NORMAL);
-        //        prgAuthor.Alignment = Element.ALIGN_RIGHT;
-        //        prgAuthor.Add(new Chunk("\n Ngày xuất : " + DateTime.Now.ToShortDateString(), fntAuthor));
-        //        document.Add(prgAuthor);
+            //Report Header
+            Font fntHead = new Font(bf, 20, Font.NORMAL);
+            Paragraph prgHeading = new Paragraph();
+            prgHeading.Alignment = Element.ALIGN_CENTER;
+            prgHeading.Add(new Chunk(strHeader.ToUpper(), fntHead));
+            document.Add(prgHeading);
 
-        //        //Add a line seperation
-        //        Paragraph p = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(0.0F, 100.0F, BaseColor.GRAY, Element.ALIGN_LEFT, 1)));
-        //        document.Add(p);
+            //Author
+            Paragraph prgAuthor = new Paragraph();
+            BaseFont btnAuthor = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+            Font fntAuthor = new Font(bf, 16, Font.NORMAL);
+            prgAuthor.Alignment = Element.ALIGN_RIGHT;
+            prgAuthor.Add(new Chunk("\n\n Quầy thuốc Bệnh Viện", fntAuthor));
+            prgAuthor.Add(new Chunk("\n Số hóa đơn : " + id_hoadon, fntAuthor));
+            prgAuthor.Add(new Chunk("\n Ngày bán : " + ngaylap, fntAuthor));
+            document.Add(prgAuthor);
+            Paragraph p = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(0.0F, 50.0F, BaseColor.GRAY, Element.ALIGN_LEFT, 1)));
+            document.Add(p);
+            prgAuthor = new Paragraph();
+            prgAuthor.Alignment = Element.ALIGN_LEFT;
+            prgAuthor.Add(new Chunk("\n Người mua : " + ten_khachhang, fntAuthor));
+            prgAuthor.Add(new Chunk("\n Địa chỉ : " + diachi, fntAuthor));
+            prgAuthor.Add(new Chunk("\n Số điện thoại: " + sodienthoai, fntAuthor));
+            prgAuthor.Add(new Chunk("\n Số bảo hiểm y tế : " + sobaohiemyte, fntAuthor));
+            prgAuthor.Add(new Chunk("\n Loại hình : " + loaihinh, fntAuthor));
+            prgAuthor.Add(new Chunk("\n Bác sĩ kê đơn : " + bacsikedon, fntAuthor));
+            prgAuthor.Add(new Chunk("\n Chuẩn đoán bệnh : " + chuandoanbenh, fntAuthor));
+            document.Add(prgAuthor);
 
-        //        //Add line break
-        //        document.Add(new Chunk("\n", fntHead));
+            //Add a line seperation
+            document.Add(new Chunk("\n\n", fntHead));
 
-        //        //Write the table
-        //        PdfPTable pdfTable = new PdfPTable(dtblTable.Columns.Count);
-        //        //Table header
-        //        pdfTable.DefaultCell.Padding = 3;
-        //        pdfTable.WidthPercentage = 100;
-        //        pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
-        //        Font fntCell = new Font(bf, 10, Font.NORMAL);
-        //        foreach (DataGridViewColumn column in dtblTable.Columns)
-        //        {
-        //            PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, fntCell));
-        //            pdfTable.AddCell(cell);
-        //        }
+            //Write the table
+            PdfPTable pdfTable = new PdfPTable(dtblTable.Columns.Count-1);
+            //Table header
+            pdfTable.DefaultCell.Padding = 3;
+            pdfTable.WidthPercentage = 100;
+            pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+            Font fntCell = new Font(bf, 12, Font.NORMAL);
 
-        //        DataTable dataTable = LoadRevenueList(Month, Year);
+            for(int i=0;i<dtblTable.Columns.Count-1;i++)
+            {
+                PdfPCell cell = new PdfPCell(new Phrase(dtblTable.Columns[i].HeaderText, fntCell));
+                pdfTable.AddCell(cell);
+            }
+            for(int i=0;i<dtblTable.Rows.Count;i++)
+            {
+                for(int j=0;j<dtblTable.Rows[i].Cells.Count-1;j++)
+                {
+                    pdfTable.AddCell(dtblTable.Rows[i].Cells[j].Value.ToString());
+                }
+            }
+            document.Add(pdfTable);
 
-        //        for (int i = 0; i < dataTable.Rows.Count; i++)
-        //        {
-        //            for (int j = 0; j < dataTable.Columns.Count; j++)
-        //            {
-        //                pdfTable.AddCell(dataTable.Rows[i][j].ToString());
-        //            }
-        //        }
-        //        document.Add(pdfTable);
-        //        document.Close();
-        //        writer.Close();
-        //        fs.Close();
-        //    }
+            prgAuthor = new Paragraph();
+            prgAuthor.Alignment = Element.ALIGN_LEFT;
+            prgAuthor.Add(new Chunk("\n\n Tổng tiền (Đã bao gồm thuế gtgt và bảo hiểm y tế) : " + tongtien +" VNĐ", fntAuthor));
+            document.Add(prgAuthor);
+            prgAuthor = new Paragraph();
+            prgAuthor.Alignment = Element.ALIGN_RIGHT;
+            prgAuthor.Add(new Chunk("\n\n\n Người bán ", fntAuthor));
+            prgAuthor.Add(new Chunk("\n\n\n"+ten_nhanvien, fntAuthor));
+            document.Add(prgAuthor);
+
+            document.Close();
+            writer.Close();
+            fs.Close();
+        }
     }
 }

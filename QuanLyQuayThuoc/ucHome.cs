@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyQuayThuoc.DTO;
 using QuanLyQuayThuoc.BUS;
+using System.IO;
 
 namespace QuanLyQuayThuoc
 {
     public partial class ucHome : UserControl
     {
-        private string id_nhanvien;
         public ucHome()
         {
             InitializeComponent();
@@ -23,16 +23,41 @@ namespace QuanLyQuayThuoc
         {
             dtgvChitiethoadon.DataSource = QLHoadonBUS.Instance.LoadChitiethoadonList(txbId_hoadon.Text);
         }
+        private void ucHome_Load(object sender, EventArgs e)
+        {
+            cbbLoaihinh.Text = "none";
+            txbId_hoadon.Text = "HD-" + PermissionBUS.Instance.GetId_hoadon().ToString();
+            LoadData();
+            TinhTong();
+        }
         private void TinhTong()
         {
             int tien = dtgvChitiethoadon.Rows.Count;
             int thanhtien = 0;
             for(int i=0;i<tien;i++)
             {
-                thanhtien += Convert.ToInt32(dtgvChitiethoadon.Rows[i].Cells["giathanh"].Value) * Convert.ToInt32(dtgvChitiethoadon.Rows[i].Cells["lieuluong"].Value);
+                thanhtien += Convert.ToInt32(dtgvChitiethoadon.Rows[i].Cells["thanhtien"].Value);
             }
-            if(rbtnBanTheoDon.Checked==true) thanhtien = thanhtien - (QLBaohiemBUS.Instance.GetTileBaoHiem(cbbLoaihinh.Text) * thanhtien) / 100;
+            thanhtien = thanhtien + (QLBaohiemBUS.Instance.GetTileBaoHiem(cbbLoaihinh.Text) * thanhtien) / 100;
             txbTongtien.Text = thanhtien.ToString();
+        }
+        private void Thuchienthanhtoan()
+        {
+            if (dtgvChitiethoadon.Rows.Count > 0)
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "PDF (*.pdf)|*.pdf";
+                sfd.FileName = "Output.pdf";
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                     QLHoadonBUS.Instance.ExportDataTableToPdf(dtgvChitiethoadon, sfd.FileName, " HÓA ĐƠN THANH TOÁN ", 
+                         txbId_hoadon.Text, dateTimePicker1.Value.ToString("dd/MM/yyyy"), txbTongtien.Text, txbBacsi.Text, txbChuandoan.Text, txbSobaohiem.Text, 
+                         txbId_nhanvien.Text,txbTen_nhanvien.Text, txbNguoimua.Text, txbDiachi.Text, txbSodienthoai.Text, cbbLoaihinh.Text);
+                }
+            }
+            QLHoadonBUS.Instance.Capnhathoadon();
+            txbId_hoadon.Text = "HD-" + PermissionBUS.Instance.GetId_hoadon().ToString();
+            QLHoadonBUS.Instance.Xuathoadon(txbId_hoadon.Text);
         }
         public void GetId_nhanvien(string id)
         {
@@ -68,7 +93,7 @@ namespace QuanLyQuayThuoc
             else
             {
                 panel3.Visible = false;
-                tbDTBS.Text = "";
+                txbBacsi.Text = "";
             }
         }
 
@@ -82,13 +107,6 @@ namespace QuanLyQuayThuoc
             txbLieuluong.Text = "";
             txbSoluong.Text = "";
             QLHoadonBUS.Instance.Taolaihoadon(txbId_hoadon.Text);
-            LoadData();
-            TinhTong();
-        }
-
-        private void ucHome_Load(object sender, EventArgs e)
-        {
-            txbId_hoadon.Text = "HD-" + PermissionBUS.Instance.GetId_hoadon().ToString();
             LoadData();
             TinhTong();
         }
@@ -119,7 +137,7 @@ namespace QuanLyQuayThuoc
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(txbSoluong.Text) < Convert.ToInt32(txbLieuluong.Text)) MessageBox.Show("Số lượng lấy không được nhiều hơn tồn kho !!!");
+            if ((Convert.ToInt32(txbSoluong.Text) < Convert.ToInt32(txbLieuluong.Text)) && (Convert.ToInt32(txbLieuluong.Text)>0)) MessageBox.Show("Số lượng lấy không được nhiều hơn tồn kho và phải lớn hơn không !!!");
             else
             {
                 QLHoadonBUS.Instance.Themchitiethoadon(Convert.ToInt32(txbLieuluong.Text), cbbId_thuoc.Text, txbId_hoadon.Text);
@@ -162,7 +180,10 @@ namespace QuanLyQuayThuoc
 
         private void btnThanhtoan_Click(object sender, EventArgs e)
         {
-
+            Thuchienthanhtoan();
+            LoadData();
+            TinhTong();
+            btnClearAll.PerformClick();
         }
     }
 }
