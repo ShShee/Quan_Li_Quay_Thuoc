@@ -231,8 +231,8 @@ namespace QuanLyQuayThuoc
 
         private void btnThanhtoan_Click(object sender, EventArgs e)
         {
-            Xoahet();
             Thuchienthanhtoan();
+            Xoahet();
             LoadData();
             TinhTong();
             

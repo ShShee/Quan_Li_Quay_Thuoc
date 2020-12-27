@@ -98,7 +98,7 @@ namespace QuanLyQuayThuoc.BUS
             prgAuthor.Add(new Chunk("\n Địa chỉ : " + diachi, fntAuthor));
             prgAuthor.Add(new Chunk("\n Số điện thoại: " + sodienthoai, fntAuthor));
             prgAuthor.Add(new Chunk("\n Số bảo hiểm y tế : " + sobaohiemyte, fntAuthor));
-            prgAuthor.Add(new Chunk("\n Loại hình : " + loaihinh, fntAuthor));
+            prgAuthor.Add(new Chunk("\n Bệnh nhân : " + loaihinh, fntAuthor));
             prgAuthor.Add(new Chunk("\n Bác sĩ kê đơn : " + bacsikedon, fntAuthor));
             prgAuthor.Add(new Chunk("\n Chuẩn đoán bệnh : " + chuandoanbenh, fntAuthor));
             document.Add(prgAuthor);

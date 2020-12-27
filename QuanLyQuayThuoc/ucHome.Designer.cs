@@ -602,9 +602,9 @@
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(12, 77);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(81, 20);
+            this.label13.Size = new System.Drawing.Size(95, 20);
             this.label13.TabIndex = 38;
-            this.label13.Text = "Loại hình :";
+            this.label13.Text = "Bệnh nhân :";
             // 
             // txbSobaohiem
             // 
