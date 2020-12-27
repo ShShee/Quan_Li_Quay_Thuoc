@@ -93,7 +93,15 @@ namespace QuanLyQuayThuoc
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            if (panel3.Visible == true && txbBacsi.Text == "")
+            if(txbNguoimua.Text=="")
+            {
+                MessageBox.Show("Vui lòng nhập tên người mua !!!");
+            }
+            else if(txbSodienthoai.Text==""||txbSodienthoai.Text.Length!=10)
+            {
+                MessageBox.Show("Số điện thoại nhập vào không hợp lệ !!!");
+            }
+            else if (panel3.Visible == true && txbBacsi.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập tên bác sĩ đã kê đơn !!!");
             }
