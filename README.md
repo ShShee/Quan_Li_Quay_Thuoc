@@ -1,4 +1,4 @@
-# Phần mềm Quản lý Khách sạn
+# Phần mềm Quản lý Quầy thuốc bệnh viện
 ## Thông tin thành viên nhóm
 - Đoàn Minh Tiến - 15520876  
 - Trần Minh Nhựt - 16520904 
