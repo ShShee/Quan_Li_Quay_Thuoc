@@ -231,11 +231,14 @@ namespace QuanLyQuayThuoc
 
         private void btnThanhtoan_Click(object sender, EventArgs e)
         {
-            Thuchienthanhtoan();
-            Xoahet();
-            LoadData();
-            TinhTong();
-            
+            if (Convert.ToInt32(txbTongtien.Text) != 0)
+            {
+                Thuchienthanhtoan();
+                Xoahet();
+                LoadData();
+                TinhTong();
+            }
+            else { MessageBox.Show("Vui lòng nhập thông tin hóa đơn !!!"); }
         }
     }
 }
