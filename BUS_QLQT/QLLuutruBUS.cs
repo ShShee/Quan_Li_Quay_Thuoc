@@ -41,5 +41,10 @@ namespace QuanLyQuayThuoc.BUS
             }
             return list;
         }
+
+        public void ThemThongTinLuuTru(Thongtinluutru thongtinluutru)
+        {
+            QLLuutruDAL.Instance.ThemThongTinLuuTru(thongtinluutru);
+        }
     }
 }

@@ -395,6 +395,7 @@
             this.button4.TabIndex = 28;
             this.button4.Text = "Lưu thay đổi";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // richTextBox1
             // 
@@ -530,6 +531,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
