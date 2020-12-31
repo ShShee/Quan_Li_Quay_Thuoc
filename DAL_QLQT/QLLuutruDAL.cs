@@ -22,9 +22,8 @@ namespace QuanLyQuayThuoc.DAL
         }
         public DataTable LoadTenthuocList(bool kedon)
         {
-            string distinct="",query = "SELECT tenthuoc FROM DBO.THONGTINLUUTRU where loai";
-            if (kedon == true) distinct = "="; else distinct = "!=";
-            query += distinct + " 'VN'";
+            string query = "SELECT tenthuoc FROM DBO.THONGTINLUUTRU ";
+            if (kedon == true) query = query+ "where loai != 'ATTP'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
     }
