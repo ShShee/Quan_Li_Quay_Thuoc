@@ -18,7 +18,7 @@ Với kiến thức còn hạn hẹp nên trong đồ án sẽ không tránh kh�
 
 ## Các đối tượng hướng đến
 - Người quản trị hệ thống.
-- Cán bộ phận quản lý.
+- Các bộ phận quản lý.
 ## Lợi ích 
 - Đảm bảo sự an toàn, tính bảo mật dữ liệu, thông tin.
 - Tạo sự tiện dụng, nhanh chóng và thoải mái cho ban quản lý có trách nhiệm quản lý.
