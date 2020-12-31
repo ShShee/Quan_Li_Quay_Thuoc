@@ -9,6 +9,10 @@ namespace QuanLyQuayThuoc.DTO
 {
     public class Thongtinluutru
     {
+        public Thongtinluutru()
+        {
+
+        }
         public Thongtinluutru(int id_loaithuoc,int soluong,string donvi,int donluong, string sogiayphep,string solo,string nhasanxuat,string tenthuoc,
             string hansudung,int giathanh, string huongdansudung,string loai,int id_baoquan,int id_nhacungcap,string id_phieunhanhang)
         {
@@ -34,7 +38,14 @@ namespace QuanLyQuayThuoc.DTO
             this.Id_loaithuoc = (int)Convert.ToInt32(row["id_loaithuoc"].ToString());
             this.Soluong = (int)Convert.ToInt32(row["soluong"].ToString());
             this.Donvi = row["donvi"].ToString();
-            this.Donluong = (int)Convert.ToInt32(row["donluong"].ToString());
+            try
+            {
+                this.Donluong = (int)Convert.ToInt32(row["donluong"].ToString());
+            }
+            catch
+            {
+
+            }
             this.Sogiayphep = row["sogiayphep"].ToString();
             this.Solo = row["solo"].ToString();
             this.Nhasanxuat = row["nhasanxuat"].ToString();
@@ -44,7 +55,14 @@ namespace QuanLyQuayThuoc.DTO
             this.Huongdansudung = row["huongdansudung"].ToString();
             this.Loai = row["loai"].ToString();
             this.Id_baoquan = (int)Convert.ToInt32(row["id_baoquan"].ToString());
-            this.Id_nhacungcap = (int)Convert.ToInt32(row["id_nhacungcap"].ToString());
+            try
+            {
+                this.Id_nhacungcap = (int)Convert.ToInt32(row["id_nhacungcap"].ToString());
+            }
+            catch
+            {
+
+            }
             this.Id_phieunhanhang = row["id_phieunhanhang"].ToString();
         }
 
@@ -109,6 +127,9 @@ namespace QuanLyQuayThuoc.DTO
             get { return hansudung; }
             set { hansudung = value; }
         }
+
+        public DateTime HanSuDungDT { get; set; }
+
         public int Giathanh
         {
             get { return giathanh; }

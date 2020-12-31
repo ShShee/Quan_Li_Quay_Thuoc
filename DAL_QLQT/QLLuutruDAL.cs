@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QuanLyQuayThuoc.DTO;
 
 namespace QuanLyQuayThuoc.DAL
 {
@@ -17,8 +18,8 @@ namespace QuanLyQuayThuoc.DAL
         }
         private QLLuutruDAL() { }
         public DataTable LoadThongtinluutruList()
-        {            
-            return DataProvider.Instance.ExecuteQuery("SELECT * FROM DBO.THONGTINLUUTRU");           
+        {
+            return DataProvider.Instance.ExecuteQuery("SELECT * FROM DBO.THONGTINLUUTRU");
         }
         public DataTable LoadTenthuocList(bool kedon)
         {
@@ -26,5 +27,13 @@ namespace QuanLyQuayThuoc.DAL
             if (kedon == true) query = query+ "where loai != 'ATTP'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
+        public void ThemThongTinLuuTru(Thongtinluutru thongtinluutru)
+        {
+            string query = @"INSERT INTO [dbo].[THONGTINLUUTRU]([tenthuoc],[hansudung],[giathanh],[id_baoquan],[soluong],[huongdansudung])
+     VALUES(N'" + thongtinluutru.Tenthuoc + "',N'"+ thongtinluutru.HanSuDungDT.ToString("yyyy-MM-dd hh:mm:ss") + "',"+ thongtinluutru.Giathanh + ","+ thongtinluutru.Id_baoquan + ",1,'"+ thongtinluutru.Huongdansudung + "')";
+            DataProvider.Instance.ExecuteQuery(query);
+        }
+
     }
 }
