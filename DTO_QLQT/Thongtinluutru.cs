@@ -38,14 +38,7 @@ namespace QuanLyQuayThuoc.DTO
             this.Id_loaithuoc = (int)Convert.ToInt32(row["id_loaithuoc"].ToString());
             this.Soluong = (int)Convert.ToInt32(row["soluong"].ToString());
             this.Donvi = row["donvi"].ToString();
-            try
-            {
-                this.Donluong = (int)Convert.ToInt32(row["donluong"].ToString());
-            }
-            catch
-            {
-
-            }
+            this.Donluong = (int)Convert.ToInt32(row["donluong"].ToString());
             this.Sogiayphep = row["sogiayphep"].ToString();
             this.Solo = row["solo"].ToString();
             this.Nhasanxuat = row["nhasanxuat"].ToString();
@@ -55,14 +48,7 @@ namespace QuanLyQuayThuoc.DTO
             this.Huongdansudung = row["huongdansudung"].ToString();
             this.Loai = row["loai"].ToString();
             this.Id_baoquan = (int)Convert.ToInt32(row["id_baoquan"].ToString());
-            try
-            {
-                this.Id_nhacungcap = (int)Convert.ToInt32(row["id_nhacungcap"].ToString());
-            }
-            catch
-            {
-
-            }
+            this.Id_nhacungcap = (int)Convert.ToInt32(row["id_nhacungcap"].ToString());
             this.Id_phieunhanhang = row["id_phieunhanhang"].ToString();
         }
 

@@ -22,6 +22,17 @@ namespace QuanLyQuayThuoc.BUS
             private set { instance = value; }
         }
         private QLHoadonBUS() { }
+        public List<Hoadon> LoadHoadonList()
+        {
+            List<Hoadon> hdList = new List<Hoadon>();
+            DataTable data = QLHoadonDAL.Instance.LoadHoadonList();
+            foreach (DataRow item in data.Rows)
+            {
+                Hoadon ib = new Hoadon(item);
+                hdList.Add(ib);
+            }
+            return hdList;
+        }
         public List<Chitietkethuoc> LoadChitiethoadonList(string id_hoadon)
         {
             List<Chitietkethuoc> ctktList = new List<Chitietkethuoc>();

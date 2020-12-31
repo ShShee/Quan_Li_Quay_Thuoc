@@ -16,6 +16,11 @@ namespace QuanLyQuayThuoc.DAL
             private set { instance = value; }
         }
         private QLHoadonDAL() { }
+        public DataTable LoadHoadonList()
+        {
+            string query = "SELECT * FROM DBO.HOADONBANTHUOC,DBO.THONGTINCOBAN WHERE TONGTIEN!=0 and HOADONBANTHUOC.id_thongtincoban=THONGTINCOBAN.id_thongtincoban";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public DataTable LoadChitiethoadonList(string id_hoadon)
         {
             string query = "SELECT * FROM DBO.CHITIETKETHUOC,DBO.THUOC,DBO.THONGTINLUUTRU where CHITIETKETHUOC.id_thuoc=THUOC.id_thuoc and THUOC.id_loaithuoc=THONGTINLUUTRU.id_loaithuoc and CHITIETKETHUOC.id_hoadon='" + id_hoadon + "'";

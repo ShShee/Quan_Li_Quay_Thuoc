@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="QLLuutruBUS.cs" />
     <Compile Include="QLBaoquanBUS.cs" />
+    <Compile Include="QLPhieuBUS.cs" />
     <Compile Include="QLThuocBUS.cs" />
     <Compile Include="HomeBUS.cs" />
     <Compile Include="infoBillBUS.cs" />

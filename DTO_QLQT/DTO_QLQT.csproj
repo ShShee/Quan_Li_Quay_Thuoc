@@ -42,8 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Baohiemyte.cs" />
+    <Compile Include="Chitietdathang.cs" />
     <Compile Include="Chitietkethuoc.cs" />
+    <Compile Include="Hoadon.cs" />
     <Compile Include="Nhacungcap.cs" />
+    <Compile Include="Phieudathang.cs" />
     <Compile Include="Thongtinbaoquan.cs" />
     <Compile Include="Thongtinluutru.cs" />
     <Compile Include="Thuoc.cs" />

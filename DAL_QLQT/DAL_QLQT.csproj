@@ -46,6 +46,7 @@
     <Compile Include="QLLuutruDAL.cs" />
     <Compile Include="QLBaoquanDAL.cs" />
     <Compile Include="QLNhacungcapDAL.cs" />
+    <Compile Include="QLPhieuDAL.cs" />
     <Compile Include="QLThuocDAL.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="LoginDAL.cs" />
